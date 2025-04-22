@@ -37,7 +37,7 @@ const Home = () => {
             <img src="/consultoriasPrincipal.jpg" alt="Consultoría" />
             <h3>Consultoría</h3>
             <p>Asesoría para tus proyectos.</p>
-            <a href="/consultoria" className="button">Descubre cómo</a>
+            <a href="/about" className="button">Descubre cómo</a>
           </div>
           <div className="home-section">
             <img src="/formacionempresPrincipal.jpg" alt="Formación Empresas" />

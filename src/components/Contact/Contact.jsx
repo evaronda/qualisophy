@@ -34,20 +34,20 @@ const Contact = () => {
     return (
     <section className="contact">
         <form onSubmit={onSubmit}>
-            <h2>Contact Us</h2>
+            <h2>CONTÁCTENOS</h2>
             <div className="input-box">
-                <label>Full Name</label>
-                <input type="text" className="field" placeholder="Enter your name" name="name" required/>
+                <label>Nombre completo</label>
+                <input type="text" className="field" placeholder="Ingrese su nombre" name="name" required/>
             </div>
             <div className="input-box">
-                <label>Email Address</label>
-                <input type="email" className="field" placeholder="Enter your email" name="email" required/>
+                <label>Correo electrónico</label>
+                <input type="email" className="field" placeholder="Ingrese su correo electrónico" name="email" required/>
             </div>
             <div className="input-box">
-                <label>Your Message</label>
-                <textarea name="message" className="field mess" placeholder="Enter your message" required></textarea>
+                <label>Su mensaje</label>
+                <textarea name="message" className="field mess" placeholder="Ingrese su mensaje" required></textarea>
             </div>
-            <button type="submit">Send Message</button>
+            <button type="submit">Enviar mensaje</button>
         </form>
     </section>
   )

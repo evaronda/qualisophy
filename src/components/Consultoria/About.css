@@ -20,11 +20,12 @@
   border: #00cc66;
   width: 130%;
 
-  display: inline;
+  display: flex;
+  flex-direction: column;
   background-image: url(1.png);
   background-size: cover;
 }
-.about-text-container {
+.consultoria-text-container {
   /* aquí agregamos lo siguiente */
   background: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
   padding: 20px;
@@ -33,12 +34,12 @@
   color: white; /* asegúrate que el texto sea blanco */
 }
 
-.about-image {
+.consultoria-image {
   width: 45%;
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
-.about-title {
+.consultoria-title {
   font-family: 'Roboto', sans-serif;
   font-size: 300%;
   margin-bottom: 20px;
@@ -46,58 +47,68 @@
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Softened shadow */
   text-align: left;
 }
-.about-text {
+.consultoria-text {
   font-size: 150%;
   line-height: 1.2;
   color: #fff;
   text-align: left;
   background-color: rgba(0,0,0,0.1.5);
 }
-.button {
+.about-button {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  color: #fff;
-  background-color: #00b4cc;
-  border-radius: 50px;
-  text-decoration: none;
+  padding: 1rem 2rem;
+  background: #73adff;
+  color: white;
+  text-transform: uppercase;
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  margin-left: 3%;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
 }
-.about-button:hover {
+
+.consultoria-button:hover {
 
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 @media (max-width: 720px) {
-  .about-container {
+  .consultoria-container {
     padding: 0;
     margin-top: 2rem;
   }
-  .about-content {
+  .consultoria-content {
     flex-direction: column;
     padding: 8vw 5vw;
     border-radius: 0%;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-image: url("1.png");
   }
-  .about-text-container {
+  .consultoria-text-container {
     width: 55%;
     text-align: left;
   }
-  .about-image-container {
+  .consultoria-image-container {
     max-width: 100%;
     text-align: left;
   }
-  .about-title {
+  .consultoria-title {
     font-size: 300%;
     white-space: nowrap;
     overflow: visible;
     text-align: center;
   }
-  .about-text {
+  .consultoria-text {
     font-size: 130%;
   }
 }
