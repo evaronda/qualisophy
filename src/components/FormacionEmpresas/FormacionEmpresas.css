@@ -231,6 +231,19 @@ textarea {
   background-color: #009955;
 }
 
+/* Initial state for elements before animation */
+.slide-in-zoom {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Final state when the element is visible */
+.slide-in-zoom.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
