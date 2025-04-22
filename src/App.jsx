@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Foundations from './components/Foundations/Foundations';
+import Services from './components/Services/Services';
+import Working from './components/Working/Working'; // Importa WorkingProcess
+import NotFound from './components/pages/NotFound';
+import Footer from './components/Home/Footer/Footer';
+import ScrollToTop from './components/hooks/scrollToTop';
+import Contact from './components/Contact/Contact';
+const App = () => {
+  const footerRef = useRef(null); // Crea un riferimento per il footer
 
-function App() {
-  const [count, setCount] = useState(0)
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: 'smooth' }); // Scrolla al footer
+    }
+  };
 
   return (
-    <>
+    <Router>
+      <Navbar scrollToFooter={scrollToFooter} /> {/* Passa la funzione al Navbar */}
+      <ScrollToTop/>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Foundations" element={<Foundations />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Working-process" element={<Working />} /> {/* Aggiungi WorkingProcess */}
+          <Route path="*" element={<NotFound />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <Footer ref={footerRef} /> {/* Usa il riferimento per il footer */}
+    </Router>
+  );
+};
 
-export default App
+export default App;

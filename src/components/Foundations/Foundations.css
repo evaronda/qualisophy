@@ -1,0 +1,216 @@
+/* Impostazioni generali */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/* Contenitore principale */
+.our-foundations {
+  max-width: 1200px;  /* Maggiore larghezza per uno stile più moderno */
+  margin: 0 auto;
+  padding: 3rem 2rem;  /* Più padding per uno spazio maggiore */
+  text-align: center;
+}
+
+/* Titolo principale */
+h1 {
+  font-size: 4rem;
+  color: #eac871;  /* Colore vivace per un aspetto futuristico */
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Effetto di ombra per il titolo */
+}
+
+/* Lista di fondamenti con griglia a 2 righe e 2 colonne */
+.foundations-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 colonne per schermi ampi */
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Elemento di ciascun fondamento */
+.foundation-item {
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;  /* Più angoli arrotondati per un look più morbido */
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;  /* Necessario per l'effetto hover */
+  background: linear-gradient( 0deg,#fdfdfb , #eaf0e1);
+
+}
+
+@keyframes example {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 50% 100%;}
+  100% {background-position: 100% 0%;}
+
+}
+
+/* Effetto hover per gli item */
+.foundation-item:hover {
+  transform: translateY(-10px);  /* Sospensione sopra al passaggio del mouse */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+  animation: example 8s ease infinite;
+
+}
+
+
+
+/* Contenuto di ciascun fondamento */
+.foundation-content {
+
+
+  text-align: left;
+  padding: 0 1.5rem;  /* Aggiunto padding per un migliore bilanciamento del contenuto */
+}
+
+/* Titolo di ciascun fondamento */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+/* Descrizione di ciascun fondamento */
+p {
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.7;
+  transition: transform 0.3s ease;
+}
+
+
+/* Responsività per dispositivi mobili */
+@media (max-width: 768px) {
+  .foundations-list {
+    grid-template-columns: 1fr;  /* Una colonna su dispositivi mobili */
+    gap: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.foundations-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw 29px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  height: auto;
+  width: 97.5%;
+  left: 200px;
+}
+.foundations-content {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #000000, #202020);
+  backdrop-filter: blur(15px); /* Smoother blur effect */
+  color: #fff;
+  padding: 6rem 70px;
+  border-radius: 50px;
+  border: #00cc66;
+  width: 130%;
+  position: relative;
+  animation: gradient 8s ease infinite;
+  transition: all 0.3s ease-in-out;
+  display: inline;
+}
+.foundations-text-container {
+  width: 50%;
+  margin-left: 2rem;
+  text-align: left;
+  color: #fffc3a;
+  overflow: hidden;
+}
+.foundations-image {
+  width: 40%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+.foundations-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 300%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Softened shadow */
+  text-align: left;
+  white-space:nowrap;
+
+}
+.foundations-text {
+  font-size: 120%;
+  line-height: 1.8;
+  color: #fff;
+  text-align: left;
+}
+.foundations-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #00cc66;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  margin-left: 3%;
+}
+.foundations-button:hover {
+  background-color: #fffc3a;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 720px) {
+  .foundations-container {
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .foundations-content {
+    flex-direction: column;
+    padding: 8vw 5vw;
+    border-radius: 0%;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .foundations-text-container {
+    width: 55%;
+    text-align: left;
+  }
+  .foundations-image-container {
+    max-width: 100%;
+    text-align: left;
+  }
+  .foundations-title {
+    font-size: 300%;
+    white-space: nowrap;
+    overflow: visible;
+    text-align: center;
+  }
+  .foundations-text {
+    font-size: 130%;
+  }
+}

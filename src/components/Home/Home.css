@@ -1,0 +1,112 @@
+
+/* Imposta il font per tutto il corpo */
+body {
+  font-family: 'Thunder', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aggiungi il font Thunder alle classi specifiche */
+.home, .title, .subtitle, .impact-statement, .button {
+  font-family: 'Thunder', sans-serif, Arial, sans-serif;
+}
+
+/* Resto del CSS come prima */
+.home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  margin-top: 80px;
+  margin-bottom: -100px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.logo-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.text-container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.title {
+  font-size: 6vw;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.title .highlight {
+  color: #567b7a
+
+  ;
+}
+
+.subtitle {
+  font-weight: 400;
+  color: #333;
+  font-size: 1.5vw;
+  margin-top: 1rem;
+}
+
+.impact-statement {
+  font-size: 1.2vw;
+  color: #555;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.button-container {
+  margin-top: 3rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #00cc66, #00cc88);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 204, 102, 0.7);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 8vw;
+  }
+  .subtitle {
+    font-size: 3vw;
+  }
+  .impact-statement {
+    font-size: 3vw;
+  }
+  .button {
+    font-size: 0.9rem;
+  }
+}
