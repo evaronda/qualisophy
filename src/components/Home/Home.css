@@ -98,7 +98,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   width: 300px;  /* Aumenta el ancho para que el texto se alargue */
-  height: 50px;  /* Asegura una altura fija */
+  height: 75px;  /* Asegura una altura fija */
   display: flex;
   align-items: center;
   justify-content: center;
