@@ -62,7 +62,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Effetto per i link (ora diventeranno gialli) */
+/* Estilo para los nuevos enlaces del menú */
 .navbar-links a {
   text-decoration: none;
   color: white;
@@ -135,6 +135,7 @@
   width: 100%;
 }
 
+/* Estilo para los nuevos enlaces del menú */
 .dropdown-menu {
   display: none;
   list-style: none;
@@ -153,6 +154,7 @@
   text-align: left;
 }
 
+/* Estilo para los nuevos enlaces del menú */
 .dropdown-menu a {
   color: white;
   font-size: 1rem;
@@ -183,6 +185,7 @@
     color: lightgray;
   }
 
+  /* Responsividad para los nuevos enlaces */
   .navbar-links {
     position: fixed;
     top: 3rem;
@@ -226,6 +229,7 @@
     padding: 0.75rem 3.2rem;
   }
 
+  /* Responsividad para los nuevos enlaces */
   .dropdown-menu {
     position: relative;
     background-color: transparent;

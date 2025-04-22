@@ -15,7 +15,7 @@ const Navbar = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  // Chiudi il menu se si clicca fuori o si scorre giù
+  // Cierra el menú si se hace clic fuera o si se desplaza hacia abajo
   const closeMenuOnClickOutside = (event) => {
     if (isMenuOpen && !event.target.closest('.navbar') && !event.target.closest('.hamburger-menu')) {
       setMenuOpen(false);
@@ -32,12 +32,12 @@ const Navbar = () => {
     document.addEventListener('click', closeMenuOnClickOutside);
     document.addEventListener('scroll', closeMenuOnScroll);
 
-    // Aggiungi il listener per lo scroll
+    // Agrega el listener para el scroll
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsScrolled(true);  // Se l'utente scorre, nascondi il menu
+        setIsScrolled(true); // Si el usuario se desplaza, oculta el menú
       } else {
-        setIsScrolled(false);  // Se è in cima alla pagina, mostra il menu
+        setIsScrolled(false); // Si está en la parte superior de la página, muestra el menú
       }
     };
 
@@ -59,7 +59,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Icono de hamburguesa */}
         <div
           className={`hamburger-menu ${isMenuOpen && !isScrolled ? 'open' : ''}`}
           onClick={toggleMenu}
@@ -70,47 +70,57 @@ const Navbar = () => {
         <ul className={`navbar-links ${isMenuOpen ? 'responsive' : ''}`}>
           <li>
             <NavLink exact to="/" activeClassName="active">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" activeClassName="active">
-              About
+              Página Principal
             </NavLink>
           </li>
           <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <button onClick={toggleDropdown} className="dropdown-btn">
-              Our Approach <span className="arrow">ᐁ</span>
+              Cursos <span className="arrow">ᐁ</span>
             </button>
             {isDropdownOpen && (
               <ul className="dropdown-menu">
                 <li>
                   <NavLink to="/Services" activeClassName="active">
-                  Our Services⠀⠀⠀
+                    Curso 1
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/Foundations" activeClassName="active">
-                    Our Foundations
+                    Curso 2
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/working-process" activeClassName="active">
-                  Working Process
+                    Curso 3
                   </NavLink>
                 </li>
               </ul>
             )}
           </li>
           <li>
+            <NavLink to="/about" activeClassName="active">
+              Consultoría
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/formacion-empresas" activeClassName="active">
+              Formación Empresas
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/partnership" activeClassName="active">
+              Partnership
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/contact" activeClassName="active">
-              Contact
+              Contacto
             </NavLink>
           </li>
         </ul>
       </nav>
 
-      {/* Overlay per il menu mobile */}
+      {/* Overlay para el menú móvil */}
       {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </>
   );
