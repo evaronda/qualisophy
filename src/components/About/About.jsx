@@ -14,7 +14,7 @@ import './About.css';
           </p>
           </div>
           <div classname="about-image">
-          <a href="/contact" className="about-button">
+          <a href="/contact" className="button">
             Let's Build Together
           </a>
         </div>
