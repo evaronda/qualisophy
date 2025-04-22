@@ -36,7 +36,7 @@ const FormacionEmpresas = () => {
           </div>
           <div className="marketing-image">
             <img
-              src="https://via.placeholder.com/600x400"
+              src="/equipo_en_formacion.jpg"
               alt="Equipo en formación"
               className="animated-image"
             />
@@ -44,20 +44,29 @@ const FormacionEmpresas = () => {
         </div>
       </div>
 
-      {/* Benefits Section */}
       <div className="benefits-section">
-        <h2>Beneficios de nuestras formaciones</h2>
-        <ul>
-          <li>Programas personalizados según tus objetivos.</li>
-          <li>Impartidos por expertos con experiencia en la industria.</li>
-          <li>Modalidad online con horarios flexibles.</li>
-          <li>Mejora de habilidades técnicas y metodológicas.</li>
-        </ul>
-        <img
-          src="https://via.placeholder.com/800x300"
-          alt="Beneficios de la formación"
-          className="animated-image"
-        />
+        <div className="benefits-image">
+          <img
+            src="/beneficio_formacion.jpg"
+            alt="Beneficios de la formación"
+          />
+        </div>
+        <div className="benefits-text">
+          <h2>Beneficios de nuestras formaciones</h2>
+          <p>
+            En un mundo empresarial en constante evolución, la formación es clave para mantenerse competitivo. 
+            Ofrecemos programas diseñados para cubrir las necesidades específicas de tu empresa, desde habilidades técnicas hasta desarrollo de liderazgo.
+          </p>
+          <p>
+            Nuestro enfoque práctico y dinámico garantiza que tu equipo adquiera conocimientos aplicables desde el primer día.
+          </p>
+          <ul>
+            <li>Programas personalizados según tus objetivos.</li>
+            <li>Impartidos por expertos con experiencia en la industria.</li>
+            <li>Modalidad online con horarios flexibles.</li>
+            <li>Mejora de habilidades técnicas y metodológicas.</li>
+          </ul>
+        </div>
       </div>
 
       {/* Contact Section */}
@@ -67,25 +76,14 @@ const FormacionEmpresas = () => {
           Completa el formulario y nos pondremos en contacto contigo para
           diseñar una formación a medida para tu empresa.
         </p>
-        <form className="contact-form">
-          <div className="form-group">
-            <label>Nombre de la Empresa</label>
-            <input type="text" placeholder="Introduce el nombre de tu empresa" required />
-          </div>
-          <div className="form-group">
-            <label>Email de Contacto</label>
-            <input type="email" placeholder="Introduce tu email" required />
-          </div>
-          <div className="form-group">
-            <label>Teléfono</label>
-            <input type="tel" placeholder="Introduce tu teléfono" required />
-          </div>
-          <div className="form-group">
-            <label>Mensaje</label>
-            <textarea placeholder="Describe tus necesidades de formación" required></textarea>
-          </div>
-          <button type="submit" className="submit-button">Enviar</button>
-        </form>
+        <div className="final-button-section">
+        <button
+          className="sky-blue-button"
+          onClick={() => window.location.href = "/contact"}
+        >
+          Ir al Formulario de Contacto
+        </button>
+        </div>
       </div>
     </div>
   );
