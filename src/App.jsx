@@ -10,6 +10,8 @@ import NotFound from './components/pages/NotFound';
 import Footer from './components/Home/Footer/Footer';
 import ScrollToTop from './components/hooks/scrollToTop';
 import Contact from './components/Contact/Contact';
+import FormacionEmpresas from './components/FormacionEmpresas/FormacionEmpresas';
+
 const App = () => {
   const footerRef = useRef(null); // Crea un riferimento per il footer
 
@@ -32,6 +34,8 @@ const App = () => {
           <Route path="/Working-process" element={<Working />} /> {/* Aggiungi WorkingProcess */}
           <Route path="*" element={<NotFound />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/formacion-empresas" element={<FormacionEmpresas />} />
+
         </Routes>
       </div>
       <Footer ref={footerRef} /> {/* Usa il riferimento per il footer */}
