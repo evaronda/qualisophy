@@ -1,12 +1,12 @@
 /* Navbar principal */
 .navbar {
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   background: linear-gradient(90deg, #ede7e7, #202020);
   color: white;
-  padding: 10px 35px;
+  padding: 2px 15px;
   border-radius: 0; /* Eliminado el borde redondeado */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;

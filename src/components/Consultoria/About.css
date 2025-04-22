@@ -27,17 +27,18 @@
 }
 
 .about-text-container {
-  background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 700px;  /* Establece un ancho máximo */
   width: 100%;  /* Asegura que el cuadro ocupe todo el espacio disponible */
+  max-width: 700px;  /* Establece un ancho máximo */
+  padding: 30px;
   margin: 0 auto;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
   color: white;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
-  backdrop-filter: blur(8px); /* Difumina el fondo (efecto glass) */
   text-align: center; /* Centra el texto dentro del contenedor */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
+
+
 
 .about-title {
   font-family: 'Roboto', sans-serif;
