@@ -25,14 +25,12 @@
   background-size: cover;
 }
 .about-text-container {
-  /* aquí agregamos lo siguiente */
-  background: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  color: white; /* asegúrate que el texto sea blanco */
+  width: 45%;
+  margin-left: 2rem;
+  text-align: left;
+  color: #fffc3a;
+  overflow: hidden;
 }
-
 .about-image {
   width: 45%;
   margin-left: 2.5%;
@@ -53,12 +51,12 @@
   text-align: left;
   background-color: rgba(0,0,0,0.1.5);
 }
-.button {
+.about-button {
   display: inline-block;
   padding: 15px 30px;
   font-size: 1.1rem;
   color: #fff;
-  background-color: #00b4cc;
+  background-color: #00cc66;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
@@ -81,7 +79,7 @@
     padding: 8vw 5vw;
     border-radius: 0%;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-image: url("1.png");
+    background-image: url("sea.jpg");
   }
   .about-text-container {
     width: 55%;
@@ -100,28 +98,53 @@
   .about-text {
     font-size: 130%;
   }
+
+  
 }
 
 
-.why-quark-techie {
+.why-quark-techie-p{
+  text-align: left;
+  font-size:20px;
+  max-width: 55%; 
+  text-shadow:0px 1px 1px rgba(0, 0, 0, 0.5) ;
+}
+p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 110%;
+}
+
+.why-quark-techie{
+  margin-left: 5%;
+}
+.why-quark-techie h2{
+  font-size: 40px;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
+  margin-left: 0%;}
 
-.why-quark-techie h2 {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.why-quark-techie p {
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1.6;
-  color: #555;
-}
-
+  .why-quark-techie-img{
+    
+    margin-left: 10%;
+    width: 20%;
+    height: 30%;
+    
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
+    max-height: 20%;
+    
+    }
+  .why-quark-techie-img-p{
+    display: flex;
+    height: 20%;}
+  .subsection{
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;  /* Più angoli arrotondati per un look più morbido */
+    padding: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;  /* Necessario per l'effetto hover */
+    background: linear-gradient( 0deg,#fdfdfb , #eaf0e1);
+  
+    }
     .subsection:hover{
       transform: scale(1.015);
     }
@@ -146,4 +169,16 @@
     margin-top: 4rem; 
 
   }
+  .consultoria-text-container {
+    /* aquí agregamos lo siguiente */
+    background: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    color: white; /* asegúrate que el texto sea blanco */
+  }
+  
+  
+ 
+  
   
