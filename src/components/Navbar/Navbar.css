@@ -1,10 +1,13 @@
 /* Navbar principal */
 .navbar {
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: linear-gradient(90deg, #ede7e7, #202020);
   color: white;
   padding: 10px 35px;
-  border-radius: 30px;
+  border-radius: 0; /* Eliminado el borde redondeado */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: flex;
@@ -12,7 +15,9 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
   background-size: 400% 400%;
+  margin-bottom: 0; /* Asegura que no sobre espacio */
 }
+
 
 
 
