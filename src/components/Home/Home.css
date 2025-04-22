@@ -1,32 +1,32 @@
-
-/* Imposta il font per tutto il corpo */
+/* Fuente general */
 body {
   font-family: 'Thunder', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Aggiungi il font Thunder alle classi specifiche */
 .home, .title, .subtitle, .impact-statement, .button {
   font-family: 'Thunder', sans-serif, Arial, sans-serif;
 }
 
-/* Resto del CSS come prima */
+/* Contenedor principal */
 .home {
   position: relative;
   display: flex;
+  flex-direction: column; /* Importante: apila elementos */
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-content: flex-start;
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow: hidden;
+  overflow: visible; /* Solución al corte */
   margin-top: 80px;
-  margin-bottom: -100px;
-  font-family:'Courier New', Courier, monospace;
+  margin-bottom: 0;
+  padding-bottom: 4rem;
 }
 
+/* Logo de fondo */
 .logo-background {
   position: absolute;
   top: 50%;
@@ -37,12 +37,15 @@ body {
   z-index: 0;
 }
 
+/* Texto principal */
 .text-container {
   position: relative;
   z-index: 1;
   text-align: center;
+  padding: 2rem;
 }
 
+/* Título */
 .title {
   font-size: 6vw;
   font-weight: 700;
@@ -53,11 +56,10 @@ body {
 }
 
 .title .highlight {
-  color: #567b7a
-
-  ;
+  color: #567b7a;
 }
 
+/* Subtítulo */
 .subtitle {
   font-weight: 400;
   color: #333;
@@ -72,14 +74,20 @@ body {
   margin-top: 2rem;
 }
 
+/* Botón */
 .button-container {
   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espacio entre los botones */
 }
 
+/* Botón principal */
+/* Botón principal */
 .button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: linear-gradient(45deg, #00cc66, #00cc88);
+  background: #73adff;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -89,24 +97,124 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
+  width: 300px;  /* Aumenta el ancho para que el texto se alargue */
+  height: 50px;  /* Asegura una altura fija */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;  /* Permite que el texto se ajuste si es largo */
+  word-wrap: break-word;  /* Ajusta el texto en varias líneas si es necesario */
 }
+
 
 .button:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 204, 102, 0.7);
+  box-shadow: 0 0 15px #73adff;
 }
 
+/* Botones en las secciones */
+.home-section a {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #73adff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  width: 200px;  /* Asegura que todos los botones tengan el mismo ancho */
+  height: 50px;  /* Asegura que todos los botones tengan la misma altura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.home-section a:hover {
+  background-color: #567b7a;
+}
+
+/* Secciones en el inicio */
+.home-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+  z-index: 2;
+}
+
+.home-section {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 420px; /* Asegura que todas las secciones tengan la misma altura mínima */
+  justify-content: space-between; /* Distribuye los elementos dentro de la sección */
+}
+
+.home-section:hover {
+  transform: translateY(-5px);
+}
+
+.home-section img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.home-section h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.home-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .home-section {
+    width: 90%;
+    min-height: auto;
+  }
+
   .title {
     font-size: 8vw;
   }
+
   .subtitle {
     font-size: 3vw;
   }
+
   .impact-statement {
     font-size: 3vw;
   }
+
   .button {
     font-size: 0.9rem;
+    width: 180px;  /* Ajusta el tamaño para pantallas pequeñas */
+    height: 45px;  /* Ajusta la altura para pantallas pequeñas */
+  }
+
+  .home-section a {
+    width: 180px;  /* Ajusta el tamaño para pantallas pequeñas */
+    height: 45px;  /* Ajusta la altura para pantallas pequeñas */
   }
 }
+
+

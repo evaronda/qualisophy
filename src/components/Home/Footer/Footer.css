@@ -1,11 +1,10 @@
-/* Footer styling */
 .footer {
-  background-color: #000000;
-  color: white;
+  background: linear-gradient(90deg, #ede7e7, #202020);
+  color: black;
   text-align: center;
   position: relative;
   width: 100%;
-  padding: 2rem 0; /* Aggiungi del padding per migliorare la visibilità */
+  padding: 2rem 0; 
   margin-top: 10%;
 }
 
@@ -25,21 +24,20 @@
 }
 
 .footer-contact a {
-  color: #61dafb;
+  color: #2c0eeb;
   text-decoration: none;
 }
 .footer-contact a:hover {
   text-decoration: underline;
 }
 
-/* Media Queries per il Footer */
 @media (max-width: 768px) {
   .footer-text {
-    font-size: 1.2rem; /* Ridotto per schermi più piccoli */
+    font-size: 1.2rem; 
   }
 
   .footer-contact {
-    font-size: 1rem; /* Leggermente più piccolo */
+    font-size: 1rem;
   }
 }
 
@@ -49,27 +47,31 @@
   }
 
   .footer-contact {
-    font-size: 0.9rem; /* Ancora più piccolo per schermi piccoli */
+    font-size: 0.9rem; 
   }
 }
 
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 1.5rem; /* Spazio tra le icone */
+  gap: 1.5rem; 
   margin-top: 1.5rem; 
 }
 
 .footer-icon img {
-  width: 40px; /* Dimensioni delle icone */
+  width: 40px;
   height: 40px;
-  transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
-  color: #61dafb;
+  transition: transform 0.3s ease;
+  color: #2c0eeb;
   text-decoration: none;
 
 }
 
 .footer-icon img:hover {
-  transform: scale(1.2); /* Ingrandimento al passaggio del mouse */
+  transform: scale(1.2); 
   
+}
+.footer, 
+.footer *:not(a) {
+  color: black !important;
 }

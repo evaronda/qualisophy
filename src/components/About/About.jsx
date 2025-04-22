@@ -18,6 +18,13 @@ const About = () => {
               ¡Hablemos de tu proyecto!
             </a>
           </div>
+<<<<<<< HEAD
+=======
+          <div classname="about-image">
+          <a href="/contact" className="button">
+            Let's Build Together
+          </a>
+>>>>>>> 317c7cf6f2690abc5a6def33de543bd56934580e
         </div>
       </div>
       <section className="why-quark-techie">
