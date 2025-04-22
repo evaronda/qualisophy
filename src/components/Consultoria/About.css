@@ -9,51 +9,50 @@
   width: 95.4%;
   left: 50%;
 }
+
 .about-content {
   display: flex;
   align-items: center;
   background: linear-gradient(90deg, #000000, #202020);
-  backdrop-filter: blur(15px); /* Smoother blur effect */
+  backdrop-filter: blur(15px); /* Efecto de difuminado */
   color: #fff;
   padding: 4.2rem 70px;
   border-radius: 50px;
   border: #00cc66;
   width: 130%;
-
   display: flex;
   flex-direction: column;
   background-image: url(1.png);
   background-size: cover;
 }
-.consultoria-text-container {
-  /* aquí agregamos lo siguiente */
-  background: rgba(0, 0, 0, 0.4); /* fondo oscuro translúcido */
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  color: white; /* asegúrate que el texto sea blanco */
+
+.about-text-container {
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia */
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 700px;  /* Establece un ancho máximo */
+  width: 100%;  /* Asegura que el cuadro ocupe todo el espacio disponible */
+  margin: 0 auto;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  backdrop-filter: blur(8px); /* Difumina el fondo (efecto glass) */
+  text-align: center; /* Centra el texto dentro del contenedor */
 }
 
-.consultoria-image {
-  width: 45%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
-.consultoria-title {
+.about-title {
   font-family: 'Roboto', sans-serif;
-  font-size: 300%;
+  font-size: 3rem; /* Ajusta el tamaño del título */
   margin-bottom: 20px;
   font-weight: bold;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Softened shadow */
-  text-align: left;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Sombra suave */
 }
-.consultoria-text {
-  font-size: 150%;
-  line-height: 1.2;
+
+.about-text {
+  font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  line-height: 1.6;
   color: #fff;
-  text-align: left;
-  background-color: rgba(0,0,0,0.1.5);
 }
+
 .about-button {
   display: inline-block;
   padding: 1rem 2rem;
@@ -77,42 +76,10 @@
   word-wrap: break-word;
 }
 
-.consultoria-button:hover {
-
+.about-button:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
-@media (max-width: 720px) {
-  .consultoria-container {
-    padding: 0;
-    margin-top: 2rem;
-  }
-  .consultoria-content {
-    flex-direction: column;
-    padding: 8vw 5vw;
-    border-radius: 0%;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-image: url("1.png");
-  }
-  .consultoria-text-container {
-    width: 55%;
-    text-align: left;
-  }
-  .consultoria-image-container {
-    max-width: 100%;
-    text-align: left;
-  }
-  .consultoria-title {
-    font-size: 300%;
-    white-space: nowrap;
-    overflow: visible;
-    text-align: center;
-  }
-  .consultoria-text {
-    font-size: 130%;
-  }
-}
-
 
 .why-quark-techie {
   text-align: center;
@@ -133,28 +100,31 @@
   color: #555;
 }
 
-    .subsection:hover{
-      transform: scale(1.015);
-    }
-    @keyframes example {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 50% 100%;}
-      100% {background-position: 100% 0%;}
-  
-    }
- 
-
-  .why-choose-us__subsections{
-    
-    border-radius: 12px;
-    
-    max-width: 95%;  
-    text-align: left;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3%;
-    margin-top: 4rem; 
-
+@media (max-width: 720px) {
+  .about-content {
+    flex-direction: column;
+    padding: 8vw 5vw;
+    border-radius: 0%;
+    background-image: url("1.png");
   }
+
+  .about-text-container {
+    width: 55%;
+    text-align: left;
+  }
+
+  .about-title {
+    font-size: 300%;
+    white-space: nowrap;
+    overflow: visible;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: 130%;
+  }
+}
+
+  
+  
   
