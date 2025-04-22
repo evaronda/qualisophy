@@ -11,10 +11,10 @@ const About = () => {
             <h1 className="about-title">Consultoría</h1>
             <p className="about-text">
               En Qualisophy, ofrecemos servicios de consultoría especializados para pequeñas empresas que buscan orientación técnica en sus proyectos, ya sean nuevos o existentes. Aportamos nuestra experiencia en calidad de software y desarrollo para ayudarte a tomar decisiones informadas, ahorrar costes y lograr resultados sostenibles.
-            </p>
+            </p> <br /><br />
           </div>
           <div className="about-image">
-            <a href="/contact" className="about-button">
+            <a href="/contact" className="button">
               ¡Hablemos de tu proyecto!
             </a>
           </div>

@@ -17,6 +17,12 @@ const About = () => {
             ¡Hablemos de tu proyecto!
           </a>
         </div>
+
+        <div className="about-image">
+          <a href="/contact" className="button">
+            Let's Build Together
+          </a>
+        </div>
       </div>
 
       <section className="why-quark-techie">
@@ -38,4 +44,5 @@ const About = () => {
 };
 
 export default About;
+
 
