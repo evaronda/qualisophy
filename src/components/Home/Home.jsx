@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Logo di sfondo */}
-      <img src="/logobackground.png" alt="Logo" className="logo-background" />
+      <img src="/PICTOGRAMA color.png" alt="Logo" className="logo-background" />
 
       {/* Contenitore per il testo */}
       <div className="text-container">
