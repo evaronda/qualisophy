@@ -23,11 +23,14 @@
   width: 130%;
   background-image: url(1.png);
   background-size: cover;
+  font-family: 'GothamRounded'
 }
 
 .about-text-container, .about-title, .about-text {
   text-align: left; /* Alinear el texto a la izquierda */
+  font-family: 'GothamRounded'
 }
+
 
 .about-text-container {
   width: 45%;
@@ -35,6 +38,7 @@
   text-align: left;
   color: #fffc3a;
   overflow: hidden;
+  
 }
 
 .about-image {
@@ -44,7 +48,7 @@
 }
 
 .about-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'GothamRounded';
   font-size: 300%;
   margin-bottom: 20px;
   font-weight: bold;
@@ -58,6 +62,7 @@
   color: #fff;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.15); /* Corregido aquí */
+  
 }
 
 .about-button {
@@ -115,15 +120,17 @@
   font-size: 20px;
   max-width: 55%;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+  
 }
 
 p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 110%;
+  font-family: 'GothamRounded' ;
+   font-size: 110%;
 }
 
 .why-quark-techie {
   margin-left: 25%;
+  font-family: 'GothamRounded'
 }
 
 .why-quark-techie h2 {

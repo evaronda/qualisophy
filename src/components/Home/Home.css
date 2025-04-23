@@ -5,6 +5,7 @@ body {
 }
 
 .home, .title, .subtitle, .impact-statement, .button {
+  font-family: 'GothamRounded'
 }
 
 /* Contenedor principal */
@@ -52,7 +53,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: black;
-  font-family: 'GothamRounded'
 }
 
 .title .highlight {
@@ -213,6 +213,7 @@ body {
     font-size: 0.9rem;
     width: 180px;  /* Ajusta el tamaño para pantallas pequeñas */
     height: 45px;  /* Ajusta la altura para pantallas pequeñas */
+    
   }
 
   .home-section a {

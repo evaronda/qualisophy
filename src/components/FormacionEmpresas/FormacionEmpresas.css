@@ -1,5 +1,5 @@
 .formacion-empresas {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'GothamRounded';
   padding: 10rem 2rem 2rem; /* Add top padding to account for the navbar height */
   background-color: #f9f9f9;
 }
@@ -176,6 +176,7 @@
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'GothamRounded'
 }
 
 .sky-blue-button:hover {

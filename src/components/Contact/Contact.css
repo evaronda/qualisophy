@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'GothamRounded', sans-serif;
 }
 
 .contact {
@@ -25,6 +26,7 @@ form {
     color: #000000;
     animation: fadeIn 0.5s ease-in-out;
     transition: transform 0.2s ease;
+    font-family: 'GothamRounded'
 }
 
 form h2 {
@@ -32,7 +34,7 @@ form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #73adff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'GothamRounded';
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -76,8 +78,7 @@ form .input-box {
 
 .input-box .field::placeholder {
     color: #bbb;
-    font-style: italic;
-}
+    font-family: 'GothamRounded';}
 
 form button {
     width: 100%;
@@ -92,6 +93,7 @@ form button {
     margin-top: 20px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    font-family: 'GothamRounded';
 }
 
 form button:hover {
