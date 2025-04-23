@@ -1,15 +1,19 @@
 /* Contact.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .contact {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100%;
     padding: 20px;
-    overflow: hidden;
-    margin-top:10%;
+    box-sizing: border-box;
 }
 
 form {
+    margin-top: 100px; /* 👈 Bajamos el formulario */
     max-width: 600px;
     width: 100%;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
@@ -27,7 +31,7 @@ form h2 {
     font-size: 34px;
     text-align: center;
     margin-bottom: 20px;
-    color: #73adff; /* Color del título */
+    color: #73adff;
     font-family: 'Roboto', sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -40,7 +44,7 @@ form .input-box {
 .input-box label {
     display: block;
     font-size: 16px;
-    color: #73adff; /* Color de las etiquetas */
+    color: #73adff;
     margin-bottom: 8px;
     font-weight: bold;
     text-transform: uppercase;
@@ -50,7 +54,7 @@ form .input-box {
     width: 100%;
     height: 50px;
     background: transparent;
-    border: 2px solid #73adff; /* Color del borde de los campos */
+    border: 2px solid #73adff;
     outline: none;
     border-radius: 10px;
     padding: 12px;
@@ -61,8 +65,8 @@ form .input-box {
 }
 
 .input-box .field:focus {
-    border-color: #73adff; /* Cambio de borde al enfocar */
-    box-shadow: 0 0 10px #73adff; /* Sombra de enfoque */
+    border-color: #73adff;
+    box-shadow: 0 0 10px #73adff;
 }
 
 .input-box .field.mess {
@@ -78,7 +82,7 @@ form .input-box {
 form button {
     width: 100%;
     height: 50px;
-    background: linear-gradient(45deg, #73adff, #2575fc); /* Gradiente de color */
+    background: linear-gradient(45deg, #73adff, #2575fc);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -91,7 +95,7 @@ form button {
 }
 
 form button:hover {
-    background: #2575fc; /* Color de hover */
+    background: #2575fc;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(37, 117, 252, 0.3);
 }
@@ -111,3 +115,6 @@ form button:disabled {
         transform: translateY(0);
     }
 }
+
+
+

@@ -67,7 +67,8 @@ const Navbar = () => {
           {isMenuOpen ? '✖' : '☰'}
         </div>
 
-        <ul className={`navbar-links ${isMenuOpen ? 'responsive' : ''}`}>
+        <ul className={`navbar-links ${isMenuOpen ? 'responsive responsive-menu' : ''}`}>
+
           <li>
             <NavLink exact to="/" activeClassName="active">
               Página Principal
@@ -127,3 +128,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

@@ -15,23 +15,37 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
   background-size: 400% 400%;
-  margin-bottom: 0 !important; /* Asegura que no haya espacio debajo */
+  margin-bottom: 0 !important;
 }
 
-/* Estilo para eliminar espacio superior al contenido siguiente */
 main, section, .contenido-principal, .after-navbar {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
 
-/* Animazione sfondo della navbar */
+/* Ajustar margen superior del primer título si es necesario */
+h1 {
+  margin-top: 1.5rem !important;
+}
+
+/* Ajustes específicos para Consultoría y Formación Empresas */
+.consultoria,
+.formacion-empresas {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.consultoria h1,
+.formacion-empresas h1 {
+  margin-top: 1.5rem !important;
+}
+
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Logo della navbar */
 .navbar-logo {
   position: relative;
   display: inline-block;
@@ -50,7 +64,6 @@ main, section, .contenido-principal, .after-navbar {
   transition: transform 0.3s ease;
 }
 
-/* Menu dei link della navbar */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -68,7 +81,6 @@ main, section, .contenido-principal, .after-navbar {
   transition: transform 0.3s ease;
 }
 
-/* Estilo para los nuevos enlaces del menú */
 .navbar-links a {
   text-decoration: none;
   color: black;
@@ -98,13 +110,18 @@ main, section, .contenido-principal, .after-navbar {
   width: 100%;
 }
 
-.navbar-links .active {
-  background-color: transparent;
-  color: black;
-  font-weight: bolder;
+/* Enlace activo en menú normal */
+.navbar-links:not(.responsive-menu) .active {
+  color: black !important;
+  font-weight: bold;
 }
 
-/* Dropdown menu */
+/* Enlace activo en menú lateral */
+.navbar-links.responsive-menu .active {
+  color: white !important;
+  font-weight: bold;
+}
+
 .dropdown {
   position: relative;
 }
@@ -179,7 +196,6 @@ main, section, .contenido-principal, .after-navbar {
   width: 50%;
 }
 
-/* Responsiveness per il menu mobile */
 @media (max-width: 1200px) {
   .hamburger-menu {
     display: block;
@@ -247,9 +263,20 @@ main, section, .contenido-principal, .after-navbar {
     max-width: 100%;
   }
 
-  /* Compensar contenido cuando navbar es fija */
   body {
-    padding-top: 80px; /* Ajusta según la altura real de tu navbar */
+    padding-top: 80px;
+  }
+
+  .navbar-links.responsive-menu a {
+    color: white !important;
+  }
+
+  .navbar-links.responsive-menu .active {
+    color: white !important;
+    font-weight: bold;
+  }
+
+  .navbar-links.responsive-menu .dropdown-btn {
+    color: white !important;
   }
 }
-
