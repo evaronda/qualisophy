@@ -59,11 +59,12 @@ h1 {
 }
 
 .navbar-logo img {
-  width: 100%;
-  max-width: 150px;
-  height: auto;
+  width: auto;              /* No obligamos al ancho completo */
+  height: 50px;             /* Mantén altura constante */
+  max-width: none;          /* Evita límites de ancho */
   transition: transform 0.3s ease;
 }
+
 
 .navbar-links {
   list-style: none;
