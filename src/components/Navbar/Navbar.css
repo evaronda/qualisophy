@@ -4,7 +4,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background: linear-gradient(12deg, #88add2  , #002685);
+  background: linear-gradient(to bottom, #002685 0,  #5d95ca 100%);
   color: white;
   padding: 2px 15px;
   border-radius: 0;
@@ -14,9 +14,9 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease-in-out;
-  background-size: 400% 400%;
+  background-size: 100% 100%; /* Ensure the gradient spans the full height */
   margin-bottom: 0 !important;
-  font-family: 'GothamRounded'
+  font-family: 'GothamRounded';
 }
 
 main, section, .contenido-principal, .after-navbar {
@@ -236,7 +236,7 @@ h1 {
     left: 0;
     width: 45%;
     height: 100%;
-    background: black;
+    background: linear-gradient(0deg, #002685 0,  #5d95ca 100%);
     z-index: 999;
   }
 

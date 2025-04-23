@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(90deg, #ede7e7, #202020);
+  background: linear-gradient(to top, #002685 0,  #5d95ca 100%);
   color: black;
   text-align: center;
   position: relative;
@@ -27,8 +27,8 @@
 
 
 .footer-contact a {
-  color: #2c0eeb;
-  text-decoration: none;
+  text-decoration: underline;
+  color: black;
 }
 .footer-contact a:hover {
   text-decoration: underline;

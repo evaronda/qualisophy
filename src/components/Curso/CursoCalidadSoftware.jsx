@@ -94,7 +94,7 @@ const CursoCalidadSoftware = () => {
       <div className="contact-section slide-in-zoom">
         <h2>Inscripción</h2>
         <p>
-          Para más información, contáctanos en <a href="mailto:hello@quark-techie.com">hello@quark-techie.com</a> o
+          Para más información, contáctanos en <a href="mailto:hello@qualisophy.com">hello@qualisophy.com</a> o
           llama al <strong>123 123 123</strong>.
         </p>
         <div className="final-button-section">
