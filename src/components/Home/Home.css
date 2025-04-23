@@ -5,8 +5,11 @@ body {
 }
 
 .home, .title, .subtitle, .impact-statement, .button {
-  font-family: 'GothamRounded'
+  font-family: 'GothamRounded', sans-serif; /* Asegúrate de que la fuente esté disponible */
+  font-weight: normal; /* Cambia a normal si es necesario */
+  color: #333; /* Color de texto por defecto */
 }
+
 
 /* Contenedor principal */
 .home {

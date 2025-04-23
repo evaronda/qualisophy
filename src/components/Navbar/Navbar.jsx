@@ -81,17 +81,17 @@ const Navbar = () => {
             {isDropdownOpen && (
               <ul className="dropdown-menu">
                 <li>
-                  <NavLink to="/Services" activeClassName="active">
+                  <NavLink to="/curso" activeClassName="active">
                     Curso 1
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/Foundations" activeClassName="active">
+                  <NavLink to="/curso" activeClassName="active">
                     Curso 2
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/working-process" activeClassName="active">
+                  <NavLink to="/curso" activeClassName="active">
                     Curso 3
                   </NavLink>
                 </li>

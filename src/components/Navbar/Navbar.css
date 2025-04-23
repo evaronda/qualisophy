@@ -4,7 +4,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background: linear-gradient(90deg, #ede7e7, #202020);
+  background: linear-gradient(12deg, #88add2  , #002685);
   color: white;
   padding: 2px 15px;
   border-radius: 0;
@@ -102,7 +102,7 @@ h1 {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #73adff;
+  background-color: #5d95ca;
   bottom: 0;
   left: 0;
   transition: all 0.3s ease;
@@ -115,7 +115,6 @@ h1 {
 
 /* Enlace activo en menú normal */
 .navbar-links:not(.responsive-menu) .active {
-  color: #73adff !important;
   font-weight: bold;
 }
 
@@ -153,7 +152,7 @@ h1 {
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #73adff;
+  background-color: #5d95ca;
   bottom: 0;
   left: 0;
   transition: all 0.3s ease;
