@@ -11,20 +11,34 @@
 }
 
 .about-content {
+  position: relative;
   display: flex;
-  flex-direction: column; /* Apilar los elementos uno debajo del otro */
-  align-items: flex-start; /* Alinear los elementos a la izquierda */
-  background: linear-gradient(90deg, #000000, #202020);
-  backdrop-filter: blur(15px);
+  flex-direction: column;
+  align-items: flex-start;
   color: #fff;
   padding: 4.2rem 70px;
   border-radius: 50px;
-  border: #00cc66;
+  border: 2px solid #00cc66;
   width: 130%;
-  background-image: url(1.png);
-  background-size: cover;
-  font-family: 'GothamRounded'
+  font-family: 'GothamRounded';
+  overflow: hidden;
+  z-index: 1;
 }
+
+.about-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/public/consultoria.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
+}
+
 
 .about-text-container, .about-title, .about-text {
   text-align: left; /* Alinear el texto a la izquierda */
@@ -189,6 +203,22 @@ p {
   border-radius: 10px;
   max-width: 600px;
   color: white;
+}
+
+.about-below-image {
+  width: 120px; /* Tamaño pequeño */
+  height: auto;
+  display: block;
+  margin: 2rem 15rem auto; /* Centrada con margen superior */
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.about-below-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
 }
 
 
