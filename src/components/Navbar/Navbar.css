@@ -112,7 +112,7 @@ h1 {
 
 /* Enlace activo en menú normal */
 .navbar-links:not(.responsive-menu) .active {
-  color: black !important;
+  color: #73adff !important;
   font-weight: bold;
 }
 
