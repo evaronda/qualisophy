@@ -1,24 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
+import useAnimation from "../hooks/useAnimation";
+import "../../App.css"; // Import global styles
 import "./Home.css";
 
+
 const Home = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible"); // Add the class when in view
-          }
-        });
-      },
-      { threshold: 0.2 } // Trigger when 20% of the element is visible
-    );
-
-    const elements = document.querySelectorAll(".animated");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect(); // Cleanup observer on unmount
-  }, []);
+  useAnimation(".animated"); // Use the hook for elements with the "animated" class
 
   return (
     <div className="home">

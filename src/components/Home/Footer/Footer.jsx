@@ -1,16 +1,23 @@
-import React from 'react';
-import './Footer.css'; // Importiamo un file CSS per il footer
+import React from "react";
+import useAnimation from "../../hooks/useAnimation"; // Import the animation hook
+import "./Footer.css";
 
 const Footer = React.forwardRef((props, ref) => {
+  // Apply the animation hook to elements with the "animated" class
+  useAnimation(".footer.animated");
+
   return (
-    <div className="footer" ref={ref}> {/* Aggiungi il ref al div del footer */}
+    <div className="footer animated" ref={ref}> {/* Add the "animated" class */}
       <div className="footer-content">
-        <p className="footer-text">© 2025 Qualisophy. Todos los derechos reservados.</p>
-        <p className="footer-contact">
-          Email: <a href="http://localhost:3000/contact">contact@qualisophy.com</a> | Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+        <p className="footer-text">
+          © 2025 Qualisophy. Todos los derechos reservados.
         </p>
-        </div>
+        <p className="footer-contact">
+          Email: <a href="http://localhost:3000/contact">contact@qualisophy.com</a> | Phone:{" "}
+          <a href="tel:+1234567890">+1 234 567 890</a>
+        </p>
       </div>
+    </div>
   );
 });
 
