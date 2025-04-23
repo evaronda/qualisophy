@@ -165,7 +165,7 @@ h1 {
 .dropdown-menu {
   display: none;
   list-style: none;
-  background-color: black;
+
   position: absolute;
   left: -20px;
   width: 200px;
@@ -173,6 +173,7 @@ h1 {
   border-radius: 10px;
   box-shadow: none;
   transition: none;
+  background: linear-gradient(180deg, #002685 0,  #5d95ca 100%);
 }
 
 .dropdown-menu li {
@@ -265,6 +266,7 @@ h1 {
   .navbar-links .active {
     box-shadow: none;
     max-width: 100%;
+    
   }
 
   body {
