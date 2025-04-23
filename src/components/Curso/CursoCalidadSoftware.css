@@ -2,6 +2,9 @@
     font-family: 'GothamRounded';
     padding: 2rem 2rem 2rem;
     background-color: #f9f9f9;
+    background-image: url(/public/fondo.jpg);
+    background-size: cover;
+    background-position: center;
   }
   
   .hero-section {

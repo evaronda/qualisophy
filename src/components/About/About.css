@@ -8,6 +8,9 @@
   height: auto;
   width: 95.4%;
   left: 50%;
+  background-image: url(/public/fondo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .about-content {
@@ -102,13 +105,13 @@
   .about-container {
     padding: 0;
     margin-top: 2rem;
+    background-image: url(/public/fondo.jpg); /* Ensure background persists */
   }
   .about-content {
     flex-direction: column;
     padding: 8vw 5vw;
     border-radius: 0%;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background-image: url("sea.jpg");
   }
   .about-text-container {
     width: 55%;
@@ -222,8 +225,7 @@ p {
 }
 
 
-  
-  
- 
-  
-  
+
+
+
+

@@ -2,6 +2,9 @@
   font-family: 'GothamRounded';
   padding: 10rem 2rem 2rem; /* Add top padding to account for the navbar height */
   background-color: #f9f9f9;
+  background-image: url(/public/fondo.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .hero-section {
   position: relative;

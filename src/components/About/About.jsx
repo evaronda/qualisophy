@@ -36,12 +36,12 @@ const About = () => {
               </b>
             </p>
           </div>
+          <img 
+            src="/public/logoqa.png" 
+            alt="Consultoría en acción" 
+            className="about-below-image" 
+          />
         </div>
-        <img 
-              src="/public/logoqa.png" 
-              alt="Consultoría en acción" 
-              className="about-below-image" 
-            />
       </section>
     </div>
   );
