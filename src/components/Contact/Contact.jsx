@@ -24,9 +24,9 @@ const Contact = () => {
     
         if (res.success) {
             Swal.fire({
-                title: "Success!",
-                text: "Message sent!",
-                icon: "success"
+                title: "Mensaje enviado con éxito!",
+                text: "Mensaje enviado!",
+                icon: "con éxito"
               });
         }
       };
