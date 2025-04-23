@@ -13,7 +13,7 @@ const Footer = React.forwardRef((props, ref) => {
           © 2025 Qualisophy. Todos los derechos reservados.
         </p>
         <p className="footer-contact">
-          Email: <a href="http://localhost:3000/contact">contact@qualisophy.com</a> | Phone:{" "}
+          Email: <a href="http://localhost:3000/contact">contact@qualisophy.com</a> | Teléfono:{" "}
           <a href="tel:+1234567890">+1 234 567 890</a>
         </p>
       </div>

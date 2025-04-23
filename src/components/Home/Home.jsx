@@ -1,7 +1,7 @@
 import React from "react";
 import useAnimation from "../hooks/useAnimation";
-import "../../App.css"; // Import global styles
 import "./Home.css";
+import "../../App.css"; // Import global styles
 
 
 const Home = () => {
