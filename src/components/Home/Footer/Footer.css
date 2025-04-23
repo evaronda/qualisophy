@@ -17,10 +17,12 @@
 .footer-text {
   font-size: 1.5rem;
   margin-bottom: 3%;
+  font-family: 'GothamRounded'
 }
 
 .footer-contact {
   font-size: 1.2rem;
+  font-family: 'GothamRounded'
 }
 
 .footer-contact a {
