@@ -95,7 +95,7 @@ const CursoCalidadSoftware = () => {
         <h2>Inscripción</h2>
         <p>
           Para más información, contáctanos en <a href="mailto:hello@quark-techie.com">hello@quark-techie.com</a> o
-          llama al <strong>622 911 405</strong>.
+          llama al <strong>123 123 123</strong>.
         </p>
         <div className="final-button-section">
           <button
