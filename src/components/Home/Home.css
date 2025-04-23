@@ -20,10 +20,11 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow: visible; /* Solución al corte */
+  overflow: hidden; /* Prevent X-axis overflow */
   margin-top: 80px;
   margin-bottom: 0;
   padding-bottom: 4rem;
+  
 }
 
 /* Logo de fondo */
@@ -215,4 +216,17 @@ body {
     width: 180px;  /* Ajusta el tamaño para pantallas pequeñas */
     height: 45px;  /* Ajusta la altura para pantallas pequeñas */
   }
+}
+
+/* Initial state for animations */
+.animated {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Final state when the element is visible */
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }

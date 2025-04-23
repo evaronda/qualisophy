@@ -26,7 +26,7 @@ const Home = () => {
       <img
         src="/PICTOGRAMA color.png"
         alt="Logo"
-        className="logo-background animated"
+        className="logo-background"
       />
 
       {/* Contenedor de texto y secciones */}
