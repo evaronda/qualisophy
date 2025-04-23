@@ -4,26 +4,27 @@
   text-align: center;
   position: relative;
   width: 100%;
-  padding: 2rem 0; 
-  margin-top: 10%;
+  padding: 1rem 0;  /* ← REDUCIDO de 2rem a 1rem */
+  margin-top: 5%;   /* ← Opcional: reduce también este margen si quieres */
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1%;
+  padding: 0.5rem;   /* ← Más compacto */
 }
 
 .footer-text {
-  font-size: 1.5rem;
-  margin-bottom: 3%;
-  font-family: 'GothamRounded'
+  font-size: 1.2rem;      /* ← Más pequeño */
+  margin-bottom: 1.5%;    /* ← Menor espacio inferior */
+  font-family: 'GothamRounded';
 }
 
 .footer-contact {
-  font-size: 1.2rem;
-  font-family: 'GothamRounded'
+  font-size: 1rem;       /* ← Reducido */
+  font-family: 'GothamRounded';
 }
+
 
 .footer-contact a {
   color: #2c0eeb;
