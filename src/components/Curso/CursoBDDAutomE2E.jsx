@@ -5,8 +5,15 @@ const CursoBDDAutomE2E = () => {
   return (
     <div className="curso-bdd">
       <div className="hero-section">
-        <h1>Curso BDD y Automatización E2E</h1>
-        <p>Aprende a diseñar, implementar y mantener pruebas automatizadas utilizando herramientas como Cucumber, Cypress y más.</p>
+        <img
+          src="/foto_presentacion_empresarial.jpg"
+          alt="Curso BDD"
+          className="hero-image"
+        />
+        <h1 className="hero-title">Curso BDD y Automatización E2E</h1>
+        <p className="hero-subtitle">
+          Aprende a diseñar, implementar y mantener pruebas automatizadas utilizando herramientas como Cucumber, Cypress y más.
+        </p>
       </div>
 
       <section className="modules">
