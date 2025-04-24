@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./CursoCodingDevOps.css";
+import "./CursoCodingDevOpsTester.css";
 
 const CursoCodingDevOps = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const CursoCodingDevOps = () => {
       {/* Hero Section */}
       <div className="hero-section slide-in-zoom">
         <img
-          src="/foto_coding_devops.jpg"
+          src="/CODING.jpg"
           alt="Curso Coding and DevOps for Testers"
           className="hero-image"
         />
