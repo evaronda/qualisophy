@@ -41,7 +41,7 @@ const Home = () => {
             <img src="/public/formacionPrincipal.webp" alt="Cursos" />
             <h3>Cursos</h3>
             <p>Formaciones prácticas y actualizadas.</p>
-            <a href="/Curso/Resumen" className="button">
+            <a href="/Resumen" className="button">
               Ver información
             </a>
           </div>
