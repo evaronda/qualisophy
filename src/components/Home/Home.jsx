@@ -38,7 +38,7 @@ const Home = () => {
 
         <div className="home-sections">
           <div className="home-section animated">
-            <img src="/public/formacionPrincipal.jpg" alt="Cursos" />
+            <img src="/public/formacionPrincipal.webp" alt="Cursos" />
             <h3>Cursos</h3>
             <p>Formaciones prácticas y actualizadas.</p>
             <a href="/cursos" className="button">
@@ -46,7 +46,7 @@ const Home = () => {
             </a>
           </div>
           <div className="home-section animated">
-            <img src="/consultoriasPrincipal.jpg" alt="Consultoría" />
+            <img src="/consultoriasPrincipal.webp" alt="Consultoría" />
             <h3>Consultoría</h3>
             <p>Asesoría para tus proyectos.</p>
             <a href="/about" className="button">
@@ -54,7 +54,7 @@ const Home = () => {
             </a>
           </div>
           <div className="home-section animated">
-            <img src="/formacionempresPrincipal.jpg" alt="Formación Empresas" />
+            <img src="/formacionempresPrincipal.webp" alt="Formación Empresas" />
             <h3>Formación Empresas</h3>
             <p>Capacitación adaptada a tu equipo.</p>
             <a href="/formacion-empresas" className="button">
@@ -62,7 +62,7 @@ const Home = () => {
             </a>
           </div>
           <div className="home-section animated">
-            <img src="/Partnership.jpg" alt="Partnership" />
+            <img src="/Partnership.webp" alt="Partnership" />
             <h3>Partnership</h3>
             <p>Conecta con nuestro talento.</p>
             <a href="/partnership" className="button">
