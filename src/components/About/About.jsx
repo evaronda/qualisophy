@@ -1,247 +1,51 @@
-.about-container {
-  display: flex;
-  flex-direction: column; /* Stack sections vertically */
-  justify-content: center;
-  align-items: center; /* Center align sections horizontally */
-  padding: 0; /* Remove any unintended paddings */
-  margin: 0; /* Remove any unintended margins */
-  height: auto;
-  width: 100%; /* Ensure the container spans the full width of the viewport */
-  box-sizing: border-box; /* Include padding and border in width/height calculations */
-  background-image: url(/public/fondo.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+import React from 'react';
+import './About.css';
 
-.about-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: #fff;
-  padding: 4.2rem 70px;
-  border-radius: 50px;
-  border: 2px solid #00cc66;
-  width: 130%;
-  font-family: 'GothamRounded';
-  overflow: hidden;
-  z-index: 1;
-  max-width: 100%; /* Ensure the content fits within the viewport */
-  box-sizing: border-box; /* Include padding and border in width calculation */
-  margin-bottom: 4rem; /* Add spacing below the "Consultoría" section */
-}
+const About = () => {
 
-.about-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(/public/consultoria.jpg);
-  background-size: cover;
-  background-position: center;
-  filter: blur(2px);
-  z-index: -1;
-}
+  return (
+    <div>
+      <div className="about-container">
+        <div className="about-content">
+          <div className="consultoria">
+            <h1 className="about-title">Consultoría</h1>
+            <p className="about-text">
+              En Qualisophy, ofrecemos servicios de consultoría especializados para pequeñas empresas que buscan orientación técnica en sus proyectos, ya sean nuevos o existentes. Aportamos nuestra experiencia en calidad de software y desarrollo para ayudarte a tomar decisiones informadas, ahorrar costes y lograr resultados sostenibles.
+            </p> 
+            <br /><br />
 
-.about-content img {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image fits within its container */
-}
+            {/* Imagen debajo del texto */}
+           
+          </div>
 
-.about-text-container, .about-title, .about-text {
-  text-align: left; /* Alinear el texto a la izquierda */
-  font-family: 'GothamRounded'
-}
+          <div className="about-image">
+            <a href="/contact" className="button">
+              ¡Hablemos de tu proyecto!
+            </a>
+          </div>
+        </div>
+      </div>
 
-.about-text-container {
-  width: 45%;
-  margin-left: 0rem;
-  text-align: left;
-  color: #fffc3a;
-  overflow: hidden;
-}
+      <section className="why-quark-techie">
+        <div className="container">
+          <h2>¿Por qué confiar en <font color="#567b7">Qualisophy</font>?</h2>
+          <div className='why-quark-techie-img-p'>
+            <p className='why-quark-techie-p'>
+              <b>
+                Si necesitas apoyo experto para lanzar, evaluar o mejorar tu producto digital, estás en el lugar correcto. Nuestro equipo ofrece soluciones personalizadas, eficaces y adaptadas al entorno tecnológico y necesidades de tu empresa.
+              </b>
+            </p>
+          </div>
+          <img 
+            src="/public/logoqa.png" 
+            alt="Consultoría en acción" 
+            className="about-below-image" 
+          />
+        </div>
+      </section>
+    </div>
+  );
+};
 
-.about-image {
-  width: 45%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
-
-.about-title {
-  font-family: 'GothamRounded';
-  font-size: 300%;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-  text-align: left;
-}
-
-.about-text {
-  font-size: 150%;
-  line-height: 1.2;
-  color: #fff;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.15); /* Corregido aquí */
-}
-
-.about-button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  color: #fff;
-  background-color: #00cc66;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  margin-left: 3%;
-  margin-top: 1rem; /* Add spacing above the button */
-}
-
-.about-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width: 720px) {
-  .about-container {
-    padding: 0;
-    margin-top: 2rem;
-    background-image: url(/public/fondo.jpg); /* Ensure background persists */
-    background-attachment: fixed; /* Optional: Parallax effect */
-  }
-  .about-content {
-    flex-direction: column;
-    padding: 8vw 5vw;
-    border-radius: 0%;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .about-text-container {
-    width: 55%;
-    text-align: left;
-  }
-  .about-image-container {
-    max-width: 100%;
-    text-align: left;
-  }
-  .about-title {
-    font-size: 300%;
-    white-space: nowrap;
-    overflow: visible;
-    text-align: center;
-  }
-  .about-text {
-    font-size: 130%;
-  }
-}
-
-.why-quark-techie-p {
-  text-align: center;
-  font-size: 20px;
-  max-width: 55%;
-  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-p {
-  font-family: 'GothamRounded' ;
-   font-size: 110%;
-}
-
-.why-quark-techie {
-  font-family: 'GothamRounded';
-  margin-bottom: 6rem; /* Add spacing below the section */
-  background: transparent; /* Ensure the section background is transparent */
-  margin-top: 6rem; /* Increase spacing above the "¿Por qué confiar en Qualisophy?" section */
-  margin-left: 0; /* Remove unnecessary left margin */
-  text-align: center; /* Center-align the content */
-}
-
-.why-quark-techie h2 {
-  font-size: 40px;
-  text-align: center;
-  margin-left: -42%;
-}
-
-.why-quark-techie-img {
-  margin-left: 10%;
-  width: 20%;
-  height: 30%;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
-  max-height: 20%;
-}
-
-.why-quark-techie-img-p {
-  display: flex;
-  height: 20%;
-  background: transparent; /* Ensure the text container background is transparent */
-  justify-content: center; /* Center the content horizontally */
-  margin: 0 auto; /* Ensure the container is centered */
-  text-align: center; /* Center-align text inside */
-}
-
-.subsection {
-  background-color: #ffffff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  padding: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  position: relative;
-  background: linear-gradient(0deg, #fdfdfb, #eaf0e1);
-}
-
-.subsection:hover {
-  transform: scale(1.015);
-}
-
-@keyframes example {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 50% 100%; }
-  100% { background-position: 100% 0%; }
-}
-
-.why-choose-us__subsections {
-  border-radius: 12px;
-  max-width: 95%;
-  text-align: left;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3%;
-  margin-top: 4rem;
-}
-
-.consultoria-text-container {
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-  color: white;
-}
-
-.about-below-image {
-  width: 120px; /* Tamaño pequeño */
-  height: auto;
-  display: block;
-  margin: 2rem auto; /* Center the image horizontally */
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 4rem; /* Add spacing between the image and the footer */
-  background: transparent; /* Ensure the image container background is transparent */
-}
-
-.about-below-image:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-}
-
-
-
-
-
+export default About;
 
