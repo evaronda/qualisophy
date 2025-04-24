@@ -65,7 +65,7 @@ const Home = () => {
             <img src="/Partnership.webp" alt="Partnership" />
             <h3>Partnership</h3>
             <p>Conecta con nuestro talento.</p>
-            <a href="/partnership" className="button">
+            <a href="/Working" className="button">
               Colabora
             </a>
           </div>
