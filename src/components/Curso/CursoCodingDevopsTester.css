@@ -1,0 +1,80 @@
+/* CursoCodingDevOps.css */
+
+.curso-coding-devops {
+    font-family: 'GothamRounded';
+    padding: 2rem;
+  }
+  
+  .hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .hero-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: #00598c;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: white; /* Aquí cambiamos el color a blanco */
+  }
+  
+  
+  .introduction-section,
+  .modules-section,
+  .instructor-section,
+  .details-section,
+  .contact-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  h2 {
+    color: #007acc;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 1.2rem;
+  }
+  
+  .slide-in-zoom {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .slide-in-zoom.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .sky-blue-button {
+    background-color: #00aaff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sky-blue-button:hover {
+    background-color: #008ecc;
+  }
+  

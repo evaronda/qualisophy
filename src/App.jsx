@@ -12,6 +12,10 @@ import ScrollToTop from './components/hooks/scrollToTop';
 import Contact from './components/Contact/Contact';
 import FormacionEmpresas from './components/FormacionEmpresas/FormacionEmpresas';
 import CursoCalidadSoftware from './components/Curso/CursoCalidadSoftware';
+import CursoBDDAutomE2E from './components/Curso/CursoBDDAutomE2E';
+import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester";
+
+
 
 const App = () => {
   const footerRef = useRef(null); // Crea un riferimento per il footer
@@ -37,6 +41,8 @@ const App = () => {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/formacion-empresas" element={<FormacionEmpresas />} />
           <Route path="/curso" element={<CursoCalidadSoftware />} />
+          <Route path="/bdd-automatizacion" element={<CursoBDDAutomE2E />} />
+          <Route path="/CursoCodingDevopsTester" element={<CursoCodingDevopsTester />} />
         </Routes>
       </div>
       <Footer ref={footerRef} /> {/* Usa il riferimento per il footer */}
