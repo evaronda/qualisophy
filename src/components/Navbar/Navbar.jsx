@@ -80,6 +80,11 @@ const Navbar = () => {
             </button>
             {isDropdownOpen && (
               <ul className="dropdown-menu">
+                <li className="dropdown-separator">
+                  <NavLink to="/resumen" activeClassName="active">
+                    <strong>Todos los Cursos</strong>
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink to="/curso" activeClassName="active">
                   Curso Calidad de Software y Testing

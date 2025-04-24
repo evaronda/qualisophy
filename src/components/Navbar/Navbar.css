@@ -65,7 +65,6 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-
 .navbar-links {
   list-style: none;
   display: flex;
@@ -81,7 +80,6 @@ h1 {
 .navbar-links li {
   position: relative;
   transition: transform 0.3s ease;
-  
 }
 
 .navbar-links a {
@@ -126,7 +124,6 @@ h1 {
 
 .dropdown {
   position: relative;
-  
 }
 
 .dropdown:hover .dropdown-menu {
@@ -144,7 +141,7 @@ h1 {
   position: relative;
   transition: all 0.3s ease;
   margin-top: -2.8px;
-  font-family: 'GothamRounded'
+  font-family: 'GothamRounded';
 }
 
 .dropdown-btn::after {
@@ -266,7 +263,6 @@ h1 {
   .navbar-links .active {
     box-shadow: none;
     max-width: 100%;
-    
   }
 
   body {
