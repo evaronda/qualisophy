@@ -109,7 +109,7 @@ const Navbar = () => {
           </NavLink>
           </li>
           <li>
-            <NavLink to="/partnership" activeClassName="active">
+            <NavLink to="/Working-process" activeClassName="active">
               Partnership
             </NavLink>
           </li>
