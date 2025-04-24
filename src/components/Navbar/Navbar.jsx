@@ -82,12 +82,12 @@ const Navbar = () => {
               <ul className="dropdown-menu">
                 <li>
                   <NavLink to="/curso" activeClassName="active">
-                    Curso 1
+                  Curso Calidad de Software y Testing
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/bdd-automatizacion" activeClassName="active">
-                    Curso 2
+                  Curso BDD y Automatización E2E
                   </NavLink>
 
                 </li>
