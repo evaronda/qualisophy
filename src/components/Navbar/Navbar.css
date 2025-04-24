@@ -286,3 +286,33 @@ h1 {
     color: white !important;
   }
 }
+
+/* Ensure proper alignment of navbar links */
+.navbar-links {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: inline-block;
+  line-height: 1.5; /* Adjust line height for proper vertical alignment */
+  vertical-align: middle; /* Ensure vertical alignment */
+}
