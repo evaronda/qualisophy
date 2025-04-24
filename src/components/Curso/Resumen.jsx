@@ -24,6 +24,11 @@ const Resumen = () => {
     <div className="resumen">
       {/* Hero Section */}
       <div className="hero-section slide-in-zoom">
+        <img
+        src="/public/formacionPrincipal.webp"
+        alt="Descripción de la imagen"
+        class="hero-image"
+    />
         <h1 className="hero-title">Resumen de Cursos</h1>
         <p className="hero-subtitle">
           Explora nuestros cursos diseñados para mejorar tus habilidades en Testing, DevOps y Automatización.
