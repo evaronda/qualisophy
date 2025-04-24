@@ -86,9 +86,10 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/curso" activeClassName="active">
+                  <NavLink to="/bdd-automatizacion" activeClassName="active">
                     Curso 2
                   </NavLink>
+
                 </li>
                 <li>
                   <NavLink to="/CursoCodingDevopsTester" activeClassName="active">

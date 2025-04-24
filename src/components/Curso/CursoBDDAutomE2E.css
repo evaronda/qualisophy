@@ -1,0 +1,70 @@
+/* Curso BDD y Automatización E2E */
+
+.curso-bdd {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #222;
+  }
+  
+  .hero-section {
+    background: url('/foto_presentacion_empresarial.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 4rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0); /* Fondo oscuro semitransparente */
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar */
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Sombra suave para el subtítulo */
+  }
+  
+  .modules, .instructor {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modules h2, .instructor h2 {
+    color: #007acc;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modules ul li {
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .curso-bdd {
+      padding: 2rem 1rem;
+    }
+  }
+  
