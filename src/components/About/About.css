@@ -1,16 +1,17 @@
 .about-container {
   display: flex;
+  flex-direction: column; /* Stack sections vertically */
   justify-content: center;
-  align-items: center;
-  padding: 5vw 29px;
-  margin-top: 0rem; /* Más arriba */
-  margin-bottom: 2rem;
+  align-items: center; /* Center align sections horizontally */
+  padding: 0; /* Remove any unintended paddings */
+  margin: 0; /* Remove any unintended margins */
   height: auto;
-  width: 95.4%;
-  left: 50%;
+  width: 100%; /* Ensure the container spans the full width of the viewport */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
   background-image: url(/public/fondo.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .about-content {
@@ -26,6 +27,9 @@
   font-family: 'GothamRounded';
   overflow: hidden;
   z-index: 1;
+  max-width: 100%; /* Ensure the content fits within the viewport */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  margin-bottom: 4rem; /* Add spacing below the "Consultoría" section */
 }
 
 .about-content::before {
@@ -42,12 +46,16 @@
   z-index: -1;
 }
 
+.about-content img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits within its container */
+}
 
 .about-text-container, .about-title, .about-text {
   text-align: left; /* Alinear el texto a la izquierda */
   font-family: 'GothamRounded'
 }
-
 
 .about-text-container {
   width: 45%;
@@ -55,7 +63,6 @@
   text-align: left;
   color: #fffc3a;
   overflow: hidden;
-  
 }
 
 .about-image {
@@ -79,7 +86,6 @@
   color: #fff;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.15); /* Corregido aquí */
-  
 }
 
 .about-button {
@@ -94,6 +100,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   margin-left: 3%;
+  margin-top: 1rem; /* Add spacing above the button */
 }
 
 .about-button:hover {
@@ -106,6 +113,7 @@
     padding: 0;
     margin-top: 2rem;
     background-image: url(/public/fondo.jpg); /* Ensure background persists */
+    background-attachment: fixed; /* Optional: Parallax effect */
   }
   .about-content {
     flex-direction: column;
@@ -137,7 +145,6 @@
   font-size: 20px;
   max-width: 55%;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-  
 }
 
 p {
@@ -146,14 +153,18 @@ p {
 }
 
 .why-quark-techie {
-  margin-left: 25%;
-  font-family: 'GothamRounded'
+  font-family: 'GothamRounded';
+  margin-bottom: 6rem; /* Add spacing below the section */
+  background: transparent; /* Ensure the section background is transparent */
+  margin-top: 6rem; /* Increase spacing above the "¿Por qué confiar en Qualisophy?" section */
+  margin-left: 0; /* Remove unnecessary left margin */
+  text-align: center; /* Center-align the content */
 }
 
 .why-quark-techie h2 {
   font-size: 40px;
   text-align: center;
-  margin-left: -42%;
+  margin-left: 0; /* Remove unnecessary left margin */
 }
 
 .why-quark-techie-img {
@@ -167,6 +178,10 @@ p {
 .why-quark-techie-img-p {
   display: flex;
   height: 20%;
+  background: transparent; /* Ensure the text container background is transparent */
+  justify-content: center; /* Center the content horizontally */
+  margin: 0 auto; /* Ensure the container is centered */
+  text-align: center; /* Center-align text inside */
 }
 
 .subsection {
@@ -212,11 +227,12 @@ p {
   width: 120px; /* Tamaño pequeño */
   height: auto;
   display: block;
-  margin: 2rem 15rem auto; /* Centrada con margen superior */
+  margin: 2rem auto; /* Center the image horizontally */
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+  margin-bottom: 4rem; /* Add spacing between the image and the footer */
+  background: transparent; /* Ensure the image container background is transparent */
 }
 
 .about-below-image:hover {

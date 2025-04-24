@@ -1,17 +1,17 @@
 .footer {
-  background: linear-gradient(to top, #002685 0,  #5d95ca 100%);
+  background: linear-gradient(to top, #002685 0, #5d95ca 100%); /* Restore gradient background */
   color: black;
   text-align: center;
   position: relative;
   width: 100%;
   padding: 1rem 0;  /* ← REDUCIDO de 2rem a 1rem */
-  margin-top: 5%;   /* ← Opcional: reduce también este margen si quieres */
+  margin-top: 0; /* Remove any top margin that might create white space */
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem;   /* ← Más compacto */
+  padding: 1rem 0; /* Ensure padding doesn't create unnecessary white space */
 }
 
 .footer-text {

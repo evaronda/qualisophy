@@ -5,6 +5,8 @@
   background-image: url(/public/fondo.jpg);
   background-size: cover;
   background-position: center;
+  min-height: 100vh; /* Ensure the container spans the full viewport height */
+  background-attachment: fixed; /* Optional: Parallax effect */
 }
 .hero-section {
   position: relative;
