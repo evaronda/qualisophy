@@ -84,6 +84,7 @@ const Navbar = () => {
                   <NavLink to="/resumen" activeClassName="active">
                     <strong>Todos los Cursos</strong>
                   </NavLink>
+                  <hr />
                 </li>
                 <li>
                   <NavLink to="/curso" activeClassName="active">

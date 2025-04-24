@@ -3,10 +3,11 @@ import { useEffect } from "react";
 const useAnimation = (selector, options = { threshold: 0.2 }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries, observerInstance) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible"); // Add the class when in view
+            observerInstance.unobserve(entry.target); // Stop observing the element
           }
         });
       },
