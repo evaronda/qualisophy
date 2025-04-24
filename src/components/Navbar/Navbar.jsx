@@ -86,9 +86,10 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/curso" activeClassName="active">
+                  <NavLink to="/bdd-automatizacion" activeClassName="active">
                     Curso 2
                   </NavLink>
+
                 </li>
                 <li>
                   <NavLink to="/curso" activeClassName="active">
@@ -104,9 +105,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-          <NavLink to="/formacion-empresas" activeClassName="active">
-            Formación Empresas
-          </NavLink>
+            <NavLink to="/formacion-empresas" activeClassName="active">
+              Formación Empresas
+            </NavLink>
           </li>
           <li>
             <NavLink to="/partnership" activeClassName="active">
