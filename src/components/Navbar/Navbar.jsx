@@ -91,8 +91,8 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/curso" activeClassName="active">
-                    Curso 3
+                  <NavLink to="/CursoCodingDevopsTester" activeClassName="active">
+                  Coding and DevOps for Testers
                   </NavLink>
                 </li>
               </ul>
@@ -104,9 +104,9 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-          <NavLink to="/formacion-empresas" activeClassName="active">
-            Formación Empresas
-          </NavLink>
+            <NavLink to="/formacion-empresas" activeClassName="active">
+              Formación Empresas
+            </NavLink>
           </li>
           <li>
             <NavLink to="/Working-process" activeClassName="active">
