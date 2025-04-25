@@ -1,16 +1,16 @@
 .about-container {
   display: flex;
-  flex-direction: column; /* Stack sections vertically */
+  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center align sections horizontally */
-  padding: 0; /* Remove any unintended paddings */
-  margin: 2rem auto; /* Add spacing above and center the container horizontally */
+  align-items: center;
+  padding: 0;
+  margin: 2rem auto;
   height: auto;
-  width: 90%; /* Set the width to 70% of the viewport */
-  box-sizing: border-box; /* Include padding and border in width/height calculations */
+  width: 90%;
+  box-sizing: border-box;
 }
 
-#root{
+#root {
   background-image: url(/public/fondo.jpg);
   background-size: cover;
   background-position: center;
@@ -30,9 +30,9 @@
   font-family: 'GothamRounded';
   overflow: hidden;
   z-index: 1;
-  max-width: 100%; /* Ensure the content fits within the viewport */
-  box-sizing: border-box; /* Include padding and border in width calculation */
-  margin-bottom: 4rem; /* Add spacing below the "Consultoría" section */
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 4rem;
 }
 
 .about-content::before {
@@ -49,46 +49,35 @@
   z-index: -1;
 }
 
-.about-content img {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image fits within its container */
-}
-
 .about-text-container, .about-title, .about-text {
-  text-align: left; /* Alinear el texto a la izquierda */
-  font-family: 'GothamRounded'
+  text-align: left;
+  font-family: 'GothamRounded';
 }
 
 .about-text-container {
   width: 45%;
   margin-left: 0rem;
-  text-align: left;
   color: #fffc3a;
   overflow: hidden;
 }
 
 .about-image {
   width: 45%;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin: 0 2.5%;
 }
 
 .about-title {
-  font-family: 'GothamRounded';
   font-size: 300%;
   margin-bottom: 20px;
   font-weight: bold;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-  text-align: left;
 }
 
 .about-text {
   font-size: 150%;
   line-height: 1.2;
   color: #fff;
-  text-align: left;
-  background-color: rgba(0, 0, 0, 0.15); /* Corregido aquí */
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .about-button {
@@ -102,8 +91,7 @@
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  margin-left: 3%;
-  margin-top: 1rem; /* Add spacing above the button */
+  margin: 1rem 0 0 3%;
 }
 
 .about-button:hover {
@@ -115,8 +103,8 @@
   .about-container {
     padding: 0;
     margin-top: 2rem;
-    background-image: url(/public/fondo.jpg); /* Ensure background persists */
-    background-attachment: fixed; /* Optional: Parallax effect */
+    background-image: url(/public/fondo.jpg);
+    background-attachment: fixed;
   }
   .about-content {
     flex-direction: column;
@@ -126,16 +114,10 @@
   }
   .about-text-container {
     width: 55%;
-    text-align: left;
-  }
-  .about-image-container {
-    max-width: 100%;
-    text-align: left;
   }
   .about-title {
     font-size: 300%;
     white-space: nowrap;
-    overflow: visible;
     text-align: center;
   }
   .about-text {
@@ -150,24 +132,13 @@
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-p {
-  font-family: 'GothamRounded' ;
-   font-size: 110%;
-}
-
 .why-quark-techie {
-  font-family: 'GothamRounded';
-  margin-bottom: 6rem; /* Add spacing below the section */
-  background: transparent; /* Ensure the section background is transparent */
-  margin-top: 6rem; /* Increase spacing above the "¿Por qué confiar en Qualisophy?" section */
-  margin-left: 0; /* Remove unnecessary left margin */
-  text-align: center; /* Center-align the content */
+  margin: 6rem 0;
+  text-align: center;
 }
 
 .why-quark-techie h2 {
   font-size: 40px;
-  text-align: center;
-  margin-left: 0; /* Remove unnecessary left margin */
 }
 
 .why-quark-techie-img {
@@ -175,16 +146,14 @@ p {
   width: 20%;
   height: 30%;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
-  max-height: 20%;
 }
 
 .why-quark-techie-img-p {
   display: flex;
   height: 20%;
-  background: transparent; /* Ensure the text container background is transparent */
-  justify-content: center; /* Center the content horizontally */
-  margin: 0 auto; /* Ensure the container is centered */
-  text-align: center; /* Center-align text inside */
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .subsection {
@@ -201,17 +170,10 @@ p {
   transform: scale(1.015);
 }
 
-@keyframes example {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 50% 100%; }
-  100% { background-position: 100% 0%; }
-}
-
 .why-choose-us__subsections {
   border-radius: 12px;
   max-width: 95%;
   text-align: left;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3%;
@@ -227,15 +189,13 @@ p {
 }
 
 .about-below-image {
-  width: 120px; /* Tamaño pequeño */
+  width: 120px;
   height: auto;
   display: block;
-  margin: 2rem auto; /* Center the image horizontally */
+  margin: 2rem auto 4rem;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 4rem; /* Add spacing between the image and the footer */
-  background: transparent; /* Ensure the image container background is transparent */
 }
 
 .about-below-image:hover {
