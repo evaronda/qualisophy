@@ -1,4 +1,4 @@
-/* Contact.css */
+/* General styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,44 +6,51 @@ html, body {
     font-family: 'GothamRounded', sans-serif;
 }
 
+.field::placeholder, form button{
+    font-family: 'GothamRounded';
+}
+/* Contact section styles */
 .contact {
     display: flex;
     justify-content: center;
+    align-items: center; /* Center content vertically */
     padding: 20px;
     box-sizing: border-box;
     background-image: url(/public/fondo.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Ensure the container spans the full viewport height */
-    background-attachment: fixed; /* Optional: Parallax effect */
+    min-height: 100vh; /* Ensure it fills the viewport height */
+    background-attachment: fixed; /* Parallax effect */
 }
 
+/* Form container styles */
 form {
-    margin-top: 100px; /* 👈 Bajamos el formulario */
-    max-width: 600px;
+    margin: 0 auto; /* Center form horizontally */
+    max-width: 500px; /* Keep form width consistent */
     width: 100%;
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     padding: 40px;
     border-radius: 16px;
-    border: 2px solid #5d95ca; /* Color del borde */
+    border: 2px solid #5d95ca; /* Border color */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); /* Efecto de difuminado */
+    backdrop-filter: blur(10px); /* Blur effect */
     color: #000000;
     animation: fadeIn 0.5s ease-in-out;
     transition: transform 0.2s ease;
-    font-family: 'GothamRounded'
+    font-family: 'GothamRounded';
 }
 
+/* Form heading styles */
 form h2 {
     font-size: 34px;
     text-align: center;
     margin-bottom: 20px;
     color: #5d95ca;
-    font-family: 'GothamRounded';
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-form .input-box {
+/* Input box styles */
+.input-box {
     margin-top: 20px;
     position: relative;
 }
@@ -68,7 +75,6 @@ form .input-box {
     font-size: 16px;
     color: #000000;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
 .input-box .field:focus {
@@ -83,8 +89,9 @@ form .input-box {
 
 .input-box .field::placeholder {
     color: #bbb;
-    font-family: 'GothamRounded';}
+}
 
+/* Button styles */
 form button {
     width: 100%;
     height: 50px;
@@ -97,8 +104,6 @@ form button {
     font-weight: 600;
     margin-top: 20px;
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-    font-family: 'GothamRounded';
 }
 
 form button:hover {
@@ -112,6 +117,7 @@ form button:disabled {
     cursor: not-allowed;
 }
 
+/* Animation styles */
 @keyframes fadeIn {
     from {
         opacity: 0;
