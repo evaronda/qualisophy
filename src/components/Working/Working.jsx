@@ -25,7 +25,7 @@ const Working = () => {
       {/* Hero Section */}
       <div className="hero-section slide-in-zoom">
         <img
-          src="/partnership.webp"
+          src="/Partnership.webp"
           alt="Programa de Colaboración"
           className="hero-image"
         />

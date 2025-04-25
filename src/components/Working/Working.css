@@ -32,7 +32,7 @@ body {
 
 .working-content {
   background-color: var(--bg-dark);
-  background-image: url("./relaxed.png");
+  background-image: url("/Partnership.webp");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -57,10 +57,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.15);  /* 🔥 Mucho más transparente */
   border-radius: 25px;
   z-index: -1;
 }
+
 
 .working-title {
   font-family: 'Roboto', sans-serif;
