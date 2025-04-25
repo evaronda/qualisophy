@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(to top, #002685 0, #5d95ca 100%); /* Restore gradient background */
-  color: black;
+  background: linear-gradient(to top, black 0, #16223f 100%);
+  color: white;
   text-align: center;
   position: relative;
   width: 100%;
@@ -28,7 +28,7 @@
 
 .footer-contact a {
   text-decoration: underline;
-  color: black;
+  color: white;
 }
 .footer-contact a:hover {
   text-decoration: underline;
@@ -73,8 +73,4 @@
 .footer-icon img:hover {
   transform: scale(1.2); 
   
-}
-.footer, 
-.footer *:not(a) {
-  color: black !important;
 }

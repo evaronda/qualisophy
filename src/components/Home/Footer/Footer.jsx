@@ -9,12 +9,11 @@ const Footer = React.forwardRef((props, ref) => {
   return (
     <div className="footer animated" ref={ref}> {/* Add the "animated" class */}
       <div className="footer-content">
-        <p className="footer-text">
+        <p className="footer-text" style={{ color: 'white' }}>
           © 2025 Qualisophy. Todos los derechos reservados.
         </p>
-        <p className="footer-contact">
-          Email: <a href="http://localhost:3000/contact">contact@qualisophy.com</a> | Teléfono:{" "}
-          <a href="tel:+1234567890">+1 234 567 890</a>
+        <p className="footer-contact" style={{ color: 'white' }}>
+          Email: <a href="http://localhost:3000/contact" style={{ color: 'white' }}>contact@qualisophy.com</a> | Teléfono: <a href="tel:+1234567890" style={{ color: 'white' }}>+1 234 567 890</a>
         </p>
       </div>
     </div>
