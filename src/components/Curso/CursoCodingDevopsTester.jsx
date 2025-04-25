@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./CursoCodingDevOpsTester.css";
+import "./CursoCodingDevopsTester.css";
 
 const CursoCodingDevOps = () => {
   useEffect(() => {

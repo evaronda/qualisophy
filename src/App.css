@@ -101,7 +101,7 @@
 /* Aggiungi questo nel tuo CSS */
 @font-face {
   font-family: 'GothamRounded';
-  src: url('fonts/GothamRounded-LightItalic.otf') format('opentype'); /* Cambia il formato se necessario */
+  src: url('Fonts/GothamRounded-LightItalic.otf') format('opentype'); /* Cambia il formato se necessario */
   font-weight: normal;
   font-style: italic;
 }
