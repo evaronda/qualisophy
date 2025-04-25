@@ -182,7 +182,7 @@ hr {
   background: linear-gradient(180deg, #002685 0, #000 100%);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   left: 0;
-  text-align: left;
+  text-align: center;
   max-width: 300px;
   margin-left: 0;
   padding: 10px;
@@ -199,6 +199,23 @@ hr {
 
 .dropdown-menu a:hover {
   background-color: var(--black-color-lighten);
+}
+
+/* Add animation for dropdown menu */
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to dropdown menu when open */
+.dropdown.open .dropdown-menu {
+  animation: dropdownOpen 0.3s ease forwards;
 }
 
 @media (max-width: 1200px) {
@@ -258,12 +275,13 @@ hr {
   /* Narrow viewport-specific dropdown styles */
   .dropdown-menu {
     position: relative;
-    background: transparent;
+    background: #16223f;
     box-shadow: none;
     left: 0;
     text-align: left;
     max-width: 100%;
     margin-left: 0;
+    padding-left: 10px; /* Add padding for better alignment */
   }
 
   .dropdown-menu a {
