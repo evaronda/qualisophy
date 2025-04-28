@@ -72,17 +72,16 @@ const FormacionEmpresas = () => {
         <div className="benefits-text">
           <h2>Beneficios de nuestras formaciones</h2>
           <p>
-            En un mundo empresarial en constante evolución, la formación es clave para mantenerse competitivo. 
-            Ofrecemos programas diseñados para cubrir las necesidades específicas de tu empresa, desde habilidades técnicas hasta desarrollo de liderazgo.
+            Descubre cómo nuestras formaciones pueden transformar tu empresa. Diseñamos experiencias de aprendizaje que no solo mejoran las habilidades de tu equipo, sino que también fomentan la colaboración y la innovación.
           </p>
           <p>
-            Nuestro enfoque práctico y dinámico garantiza que tu equipo adquiera conocimientos aplicables desde el primer día.
+            Con un enfoque centrado en resultados, ayudamos a tu organización a alcanzar sus metas estratégicas mientras potenciamos el desarrollo profesional de cada participante.
           </p>
           <ul>
-            <li>Programas personalizados según tus objetivos.</li>
-            <li>Impartidos por expertos con experiencia en la industria.</li>
-            <li>Modalidad online con horarios flexibles.</li>
-            <li>Mejora de habilidades técnicas y metodológicas.</li>
+            <li>Formaciones adaptadas a las necesidades específicas de tu empresa.</li>
+            <li>Metodologías prácticas que aseguran la aplicación inmediata de los conocimientos.</li>
+            <li>Flexibilidad en formatos y horarios para ajustarse a tu equipo.</li>
+            <li>Impacto medible en el desempeño y productividad de tu organización.</li>
           </ul>
         </div>
       </div>
