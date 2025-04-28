@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
@@ -6,6 +6,7 @@ const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const dropdownRef = useRef(null); // Reference for the dropdown
 
   // Alterna el estado del dropdown
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
@@ -16,10 +17,13 @@ const Navbar = () => {
     document.querySelector('.overlay').classList.toggle('active', !isMenuOpen);
   };
 
-  // Cierra el menú si se hace clic fuera o si se desplaza hacia abajo
-  const handleOutsideClickOrScroll = (event) => {
-    if (isMenuOpen && (!event.target.closest('.navbar') && !event.target.closest('.hamburger-menu'))) {
+  // Cierra el menú o dropdown si se hace clic fuera
+  const handleOutsideClick = (event) => {
+    if (isMenuOpen && !event.target.closest('.navbar') && !event.target.closest('.hamburger-menu')) {
       setMenuOpen(false);
+    }
+    if (isDropdownOpen && dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
     }
   };
 
@@ -27,16 +31,14 @@ const Navbar = () => {
   const handleScroll = () => setIsScrolled(window.scrollY > 0);
 
   useEffect(() => {
-    document.addEventListener('click', handleOutsideClickOrScroll);
-    document.addEventListener('scroll', handleOutsideClickOrScroll);
+    document.addEventListener('click', handleOutsideClick);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      document.removeEventListener('click', handleOutsideClickOrScroll);
-      document.removeEventListener('scroll', handleOutsideClickOrScroll);
+      document.removeEventListener('click', handleOutsideClick);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isDropdownOpen]);
 
   return (
     <>
@@ -61,7 +63,7 @@ const Navbar = () => {
               Página Principal
             </NavLink>
           </li>
-          <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
+          <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`} ref={dropdownRef}>
             <button onClick={toggleDropdown} className="dropdown-btn">
               Cursos <span className="arrow">ᐁ</span>
             </button>
