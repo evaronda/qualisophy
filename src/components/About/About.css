@@ -114,18 +114,18 @@
     flex-direction: column;
     padding: 8vw 5vw;
     border-radius: 0%;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease; /* Cambiado para mayor consistencia */
   }
   .about-text-container {
-    width: 55%;
+    width: 100%; /* Ajustado para mejor uso del espacio */
   }
   .about-title {
-    font-size: 300%;
-    white-space: nowrap;
+    font-size: 250%; /* Reducido para mejor ajuste en pantallas pequeñas */
+    white-space: normal; /* Permitir que el texto se ajuste */
     text-align: center;
   }
   .about-text {
-    font-size: 130%;
+    font-size: 120%; /* Ajustado para mejor legibilidad */
   }
 }
 

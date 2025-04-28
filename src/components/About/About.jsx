@@ -18,7 +18,7 @@ const About = () => {
 
           <div className="about-image animated">
             <a href="/contact" className="button animated">
-              ¡Hablemos de tu proyecto!
+              ¡Hablemos sobre tus ideas!
             </a>
           </div>
         </div>

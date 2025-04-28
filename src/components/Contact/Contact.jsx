@@ -19,7 +19,6 @@ const Contact = () => {
         const json = JSON.stringify(object);
 
         try {
-            // Send form data to API
             const res = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
@@ -29,16 +28,25 @@ const Contact = () => {
                 body: json
             }).then((res) => res.json());
 
-            // Handle success response
             if (res.success) {
                 Swal.fire({
                     title: "Mensaje enviado con éxito!",
                     text: "Mensaje enviado!",
                     icon: "success"
                 });
+            } else {
+                Swal.fire({
+                    title: "Error al enviar el mensaje",
+                    text: "Por favor, inténtelo de nuevo más tarde.",
+                    icon: "error"
+                });
             }
-        } catch (error) {
-            console.error("Error submitting form:", error);
+        } catch {
+            Swal.fire({
+                title: "Error de conexión",
+                text: "No se pudo enviar el mensaje. Verifique su conexión a internet.",
+                icon: "error"
+            });
         }
     };
 
