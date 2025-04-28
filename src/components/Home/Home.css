@@ -15,15 +15,16 @@ body {
 .home {
   position: relative;
   display: flex;
-  flex-direction: column; /* Importante: apila elementos */
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  overflow: hidden; /* Prevent X-axis overflow */
-  margin-top: 80px;
+  overflow: hidden;
+  margin-top: 0; /* Remove margin to avoid blank space */
+  padding-top: 80px; /* Add padding equal to navbar height */
   margin-bottom: 0;
   padding-bottom: 4rem;
   
