@@ -4,6 +4,7 @@
     font-family: 'GothamRounded';
     padding: 2rem;
     background-image: url(/public/fondo.jpg);
+    background-attachment: fixed;
 }
 
 .hero-section {
@@ -70,7 +71,7 @@ li {
 }
 
 .sky-blue-button {
-    background-color: #00aaff;
+    background-color: #16223f;
     color: white;
     padding: 0.8rem 1.5rem;
     border: none;
@@ -90,7 +91,7 @@ li {
 
 .courses-section h2 {
     color: #007acc;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
