@@ -94,6 +94,10 @@
   margin: 1rem 0 0 3%;
 }
 
+.button{
+  margin: 2rem 0;
+}
+
 .about-button:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
