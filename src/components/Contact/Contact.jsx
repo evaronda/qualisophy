@@ -11,28 +11,27 @@ const Contact = () => {
         event.preventDefault();
         const formData = new FormData(event.target);
 
-        // Add access key to form data
-        formData.append("access_key", "4dee9961-7fc5-4168-bfbf-248af5537b25");
-
         // Convert form data to JSON
         const object = Object.fromEntries(formData);
         const json = JSON.stringify(object);
 
         try {
-            const res = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch("https://hook.eu2.make.com/ualsygn1bh4l2vv9aqu10crsm412ndtq", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     Accept: "application/json"
                 },
                 body: json
-            }).then((res) => res.json());
+            });
+            console.log(response);
 
-            if (res.success) {
+            // Check if the response indicates success
+            if (response.ok) {
                 Swal.fire({
                     title: "Mensaje enviado con éxito!",
                     text: "Mensaje enviado!",
-                    icon: "success"
+                    icon: "success",
                 });
             } else {
                 Swal.fire({
