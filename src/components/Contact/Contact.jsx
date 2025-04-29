@@ -16,15 +16,14 @@ const Contact = () => {
         const json = JSON.stringify(object);
 
         try {
-            const response = await fetch("https://hook.eu2.make.com/ualsygn1bh4l2vv9aqu10crsm412ndtq", {
+            const response = await fetch(import.meta.env.VITE_REACT_APP_WEBHOOK_URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    Accept: "application/json"
+                    Accept: "application/json",
                 },
-                body: json
+                body: json,
             });
-            console.log(response);
 
             // Check if the response indicates success
             if (response.ok) {
