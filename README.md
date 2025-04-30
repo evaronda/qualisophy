@@ -2,8 +2,10 @@
 
 1. npm install
 
-2. npm run dev
+2. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
 
+
+3. npm run dev
 
 # React + Vite
 
