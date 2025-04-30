@@ -10,7 +10,7 @@ import Select from '@mui/material/Select';
 const menuProps = {
     PaperProps: {
         sx: {
-            background: 'linear-gradient(45deg, #5d95ca 30%, #2575fc 90%)',
+            background: 'linear-gradient(45deg,rgb(122, 165, 205) 30%, #2575fc 90%)',
             color: 'white',
             '& .MuiMenuItem-root': {
                 '&:hover': {
@@ -86,7 +86,6 @@ const Curso = () => {
                     <input type="email" className="field" placeholder="Ingrese su correo electrónico" name="email" required />
                 </div>
                 <div className="input-box">
-                    <label>Curso</label>
                     <Box sx={{ minWidth: 120 }}>
                         <FormControl fullWidth>
                             <InputLabel id="course-select-label">Seleccione un curso</InputLabel>
