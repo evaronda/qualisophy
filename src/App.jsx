@@ -14,6 +14,7 @@ import CursoBDDAutomE2E from './components/Curso/CursoBDDAutomE2E';
 import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester";
 import Resumen from './components/Curso/Resumen';
 import Curso from './components/Contact/Curso';
+import Colaborar from './components/Contact/Colaborar';
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/CursoCodingDevopsTester" element={<CursoCodingDevopsTester />} />
           <Route path="/resumen" element={<Resumen />} /> {/* Ruta para el componente Resumen */}
           <Route path="/curso_formulario" element={<Curso />} />
+          <Route path="/colaborar" element={<Colaborar />} />
         </Routes>
       </div>
       <Footer ref={footerRef} /> {/* Usa il riferimento per il footer */}

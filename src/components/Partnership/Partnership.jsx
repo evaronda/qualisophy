@@ -73,7 +73,7 @@ const Partnership = () => {
         <div className="final-button-section">
           <button
             className="sky-blue-button"
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => (window.location.href = "/colaborar")}
           >
             Quiero Colaborar
           </button>
