@@ -148,6 +148,15 @@ form button:focus {
     background-position: right 12px center;
     background-size: 16px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: #5d95ca; /* Light blue text color */
+}
+
+.input-box select.field:focus {
+    outline: none;
+    border-color: #2575fc;
+    box-shadow: 0 0 10px #5d95ca;
+    background: linear-gradient(135deg, #5d95ca 0%, #ffffff 100%);
+    color: #5d95ca; /* Ensure text color remains light blue on focus */
 }
 
 form button.selected,
@@ -159,6 +168,18 @@ form button:active {
     border: 2px solid #5d95ca;
     outline: none;
 }
+
+.input-box select.field option {
+    background: linear-gradient(135deg, #5d95ca 0%, #ffffff 100%);
+    color: #000; /* Black text for better readability */
+    font-family: 'GothamRounded';
+    padding: 10px;
+}
+
+.InputLabel {
+    font-family: 'GothamRounded';
+}
+
 
 
 
