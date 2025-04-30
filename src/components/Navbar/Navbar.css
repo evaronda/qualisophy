@@ -109,7 +109,7 @@ h1 {
 .navbar-links a:hover::after,
 .navbar-links .active::after {
   width: 100%;
-  background-color: white;
+  background-color: #5d95ca;
 }
 
 /* Enlace activo en menú normal */
