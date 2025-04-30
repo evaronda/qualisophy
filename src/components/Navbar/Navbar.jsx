@@ -104,7 +104,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/Working-process" activeClassName="active" style={{ color: 'white' }}>
+            <NavLink to="/Partnership" activeClassName="active" style={{ color: 'white' }}>
               Partnership
             </NavLink>
           </li>
