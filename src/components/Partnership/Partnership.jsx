@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import "./Working.css";
+import "./Partnership.css";
 
-const Working = () => {
+const Partnership = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -83,4 +83,4 @@ const Working = () => {
   );
 };
 
-export default Working;
+export default Partnership;

@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Foundations from './components/Foundations/Foundations';
 import Services from './components/Services/Services';
-import Working from './components/Working/Working'; // Importa WorkingProcess
+import Partnership from './components/Partnership/Partnership';
 import NotFound from './components/pages/NotFound';
 import Footer from './components/Home/Footer/Footer';
 import ScrollToTop from './components/hooks/scrollToTop';
@@ -37,7 +37,7 @@ const App = () => {
           <Route path="/Foundations" element={<Foundations />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Working-process" element={<Working />} /> {/* Aggiungi WorkingProcess */}
+          <Route path="/Partnership" element={<Partnership />} /> {/* Aggiungi WorkingProcess */}
           <Route path="*" element={<NotFound />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/formacion-empresas" element={<FormacionEmpresas />} />

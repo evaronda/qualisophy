@@ -3,7 +3,7 @@
 .resumen {
     font-family: 'GothamRounded';
     padding: 2rem;
-    background-image: url(/public/fondo.jpg);
+    background-image: url(/qualisophy/fondo.jpg);
     background-attachment: fixed;
 }
 
