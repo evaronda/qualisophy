@@ -6,9 +6,9 @@ const NotFound = () => {
   return (
     <div style={styles.container}>
       <div style={styles.content}>
-        <h1 style={styles.header}>404 - Page not found</h1>
-        <p style={styles.message}>Oops! The page you are searching doesn't exist.</p>
-        <p>You can return <Link to="/" style={styles.link}>home page</Link> or search other.</p>
+        <h1 style={styles.header}>404 - Página no encontrada</h1>
+        <p style={styles.message}>Ups! La página que buscas no se ha encontrado.</p>
+        <p>Puedes volver a la<Link to="/" style={styles.link}>página principal</Link> o buscar otra.</p>
       </div>
     </div>
   );
