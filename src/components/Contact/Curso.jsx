@@ -63,6 +63,7 @@ const Curso = () => {
                         <option value="Coding and DevOps for Testers">Coding and DevOps for Testers</option>
                     </select>
                 </div>
+                <input type="hidden" name="formType" value="curso" />
                 <button type="submit">Inscribirse</button>
             </form>
         </section>

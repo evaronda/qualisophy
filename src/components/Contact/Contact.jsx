@@ -65,6 +65,7 @@ const Contact = () => {
                     <label>Su mensaje</label>
                     <textarea name="message" className="field mess" placeholder="Ingrese su mensaje" required></textarea>
                 </div>
+                <input type="hidden" name="formType" value="contact" />
                 <button type="submit">Enviar mensaje</button>
             </form>
         </section>
