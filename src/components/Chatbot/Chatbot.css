@@ -27,6 +27,10 @@
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
 }
 
 /* Close button */
@@ -41,22 +45,53 @@
   color: white; /* White close button */
 }
 
-/* Chatbot text and bubbles */
-.chatbot-box .rsc-header {
-  background-color: #16223f; /* Dark blue header */
-  color: white; /* White header text */
+/* Chatbot messages */
+.chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  color: white;
 }
 
-.rsc-ts-bot .rsc-ts-bubble{
-  background-color: #16223f; /* Dark blue bot bubble */
-  color: white; /* White bot text */
+.chatbot-message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 80%;
 }
 
-.rsc-ts-user .rsc-ts-bubble{
-  background-color: #2575fc; /* Light blue user bubble */
-  color: white; /* White user text */
+.chatbot-message.bot {
+  background-color: #2575fc; /* Light blue bot bubble */
+  color: white;
+  align-self: flex-start;
 }
 
-.rsc-header-title{
-  color:white;
+.chatbot-message.user {
+  background-color: white; /* White user bubble */
+  color: #16223f; /* Dark blue user text */
+  align-self: flex-end;
+}
+
+/* Chatbot input */
+.chatbot-input {
+  display: flex;
+  padding: 10px;
+  background: #16223f;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.chatbot-input button {
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
