@@ -101,8 +101,8 @@ const ChatbotWidget = () => {
               steps={steps}
               headerTitle="Asistente Virtual"
               placeholder="Escribe tu mensaje..."
-              botAvatar="/bot-avatar.png"
-              userAvatar="/user-avatar.png"
+              botAvatar="/public/Chatbot Chat Message.jpg"
+              userAvatar="/public/user.jpg"
             />
           </ThemeProvider>
         </div>
