@@ -89,7 +89,7 @@ const ChatbotWidget = () => {
   return (
     <div>
       <button className="chatbot-button" onClick={toggleChatbot}>
-        💬 Chat
+        💬
       </button>
       {isOpen && (
         <div className="chatbot-box">
