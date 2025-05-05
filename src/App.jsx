@@ -15,6 +15,7 @@ import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester"
 import Resumen from './components/Curso/Resumen';
 import Curso from './components/Contact/Curso';
 import Colaborar from './components/Contact/Colaborar';
+import ChatbotWidget from './components/Chatbot/Chatbot'; // Importa il tuo chatbot
 
 
 const App = () => {
@@ -46,6 +47,7 @@ const App = () => {
           <Route path="/colaborar" element={<Colaborar />} />
         </Routes>
       </div>
+      <ChatbotWidget />
       <Footer ref={footerRef} /> {/* Usa il riferimento per il footer */}
     </Router>
   );
