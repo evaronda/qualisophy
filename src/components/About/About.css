@@ -54,6 +54,10 @@
   font-family: 'GothamRounded';
 }
 
+.about-title{
+  color: #ebc870;
+}
+
 .about-text-container {
   width: 45%;
   margin-left: 0rem;
