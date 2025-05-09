@@ -2,10 +2,10 @@
 
 1. npm install
 
-2. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
+2. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}} y VITE_HUGGING_FACE_API_KEY={{tu clave de HuggingFace para el chatbot con IA}}
 
 
-3. npm run dev
+4. npm run dev
 
 # React + Vite
 
