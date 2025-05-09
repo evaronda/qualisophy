@@ -1,12 +1,35 @@
-# Pasos para ejecutar el proyecto:
+# Pasos para ejecutar el proyecto con Ollama:
 
-1. npm install
+## 1. Instalación de dependencias
 
-2. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
+Ejecuta el siguiente comando para instalar las dependencias necesarias:
 
+```bash
+npm install
+```
 
-3. npm run dev
+## 2. Configuración del archivo .env
 
+```bash
+VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
+VITE_OLLAMA_BASE_URL=http://localhost:11434
+VITE_OLLAMA_MODEL=llama3:latest
+```
+
+VITE_OLLAMA_BASE_URL: La URL base de tu instancia local de Ollama. Por defecto, es http://localhost:11434.
+VITE_OLLAMA_MODEL: El nombre del modelo que deseas usar. Por defecto, es llama3:latest. Puedes cambiarlo a otro modelo disponible en tu instancia de Ollama (por ejemplo, mistral:latest).
+
+## 3. Ejecutar el proyecto
+
+```bash
+npm run dev
+```
+
+## 4. Cambiar el modelo de Ollama
+Si deseas usar un modelo diferente, simplemente edita la variable VITE_OLLAMA_MODEL en el archivo .env y reinicia el servidor de desarrollo:
+```bash
+VITE_OLLAMA_MODEL=mistral:latest
+```
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

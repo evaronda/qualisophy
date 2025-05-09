@@ -7,8 +7,8 @@ const ChatbotWidget = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  // Initialize Ollama client
-  const client = new Ollama({ baseUrl: "http://localhost:11434/api/chat" }); // Ensure your local Ollama instance is running
+  // Initialize Ollama client using environment variable
+  const client = new Ollama({ baseUrl: import.meta.env.VITE_OLLAMA_BASE_URL });
 
   // Add a system message to provide context about the webpage
   useEffect(() => {
@@ -35,11 +35,11 @@ const ChatbotWidget = () => {
       setMessages((prev) => [...prev, botMessage]);
   
       // Call Ollama's chat API with streaming support
-      const response = await fetch("http://localhost:11434/api/chat", {
+      const response = await fetch(import.meta.env.VITE_OLLAMA_BASE_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "llama3:latest", // Specify the model name
+          model: import.meta.env.VITE_OLLAMA_MODEL, // Use environment variable for model
           messages: [
             {
               role: "system",
