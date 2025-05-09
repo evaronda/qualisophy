@@ -51,6 +51,8 @@
   padding: 10px;
   overflow-y: auto;
   color: white;
+  word-wrap: break-word; /* Ensure long messages wrap */
+
 }
 
 .chatbot-message {
@@ -64,6 +66,7 @@
   background-color: #2575fc; /* Light blue bot bubble */
   color: white;
   align-self: flex-start;
+  align-self: flex-start; /* Align bot messages to the left */
 }
 
 .chatbot-message.user {
