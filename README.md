@@ -1,5 +1,7 @@
 # Pasos para ejecutar el proyecto con Ollama:
 
+## 0. Instalar Ollama y un modelo (ollama pull llama3:latest)
+
 ## 1. Instalación de dependencias
 
 Ejecuta el siguiente comando para instalar las dependencias necesarias:
