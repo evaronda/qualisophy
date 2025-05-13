@@ -26,8 +26,6 @@ Menú superior con acceso a secciones clave: Página Principal, Cursos, Consulto
 # 3 Sección de Introducción a los Cursos
 Presentación del propósito formativo con foco en Testing, DevOps y Automatización.
 
-Llamado visual atractivo con texto destacado y fondo animado.
-
 # 4 Visualización de Cursos Disponibles
 Muestra detallada de los cursos disponibles con nombre, descripción y formador (por ejemplo, Francisco Guerrero).
 
