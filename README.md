@@ -18,7 +18,7 @@ VITE_OLLAMA_BASE_URL=http://localhost:11434
 VITE_OLLAMA_MODEL=llama3:latest
 ```
 
-VITE_OLLAMA_BASE_URL: La URL base de tu instancia local de Ollama. Por defecto, es http://localhost:11434.
+VITE_OLLAMA_BASE_URL: La URL base de tu instancia local de Ollama. Por defecto, es http://localhost:11434/api/chat
 VITE_OLLAMA_MODEL: El nombre del modelo que deseas usar. Por defecto, es llama3:latest. Puedes cambiarlo a otro modelo disponible en tu instancia de Ollama (por ejemplo, mistral:latest).
 
 ## 3. Ejecutar el proyecto
