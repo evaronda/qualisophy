@@ -1,19 +1,14 @@
 import React from 'react';
 import './About.css';
 import useAnimation from "../hooks/useAnimation";
+import WaveBackground from "../WaveBackground/WaveBackground.jsx"; // Import the wave background component
 
 const About = () => {
   useAnimation(".animated"); // Apply animations to elements with the "animated" class
 
   return (
     <div>
-      {/* Wave background elements */}
-      <div className="wave-background">
-        <div className="wave"></div>
-        <div className="wave"></div>
-        <div className="wave"></div>
-      </div>
-      
+      <WaveBackground />      
       <div className="about-container animated">
         <div className="about-content animated">
           <div className="consultoria animated">
