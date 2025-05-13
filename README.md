@@ -59,8 +59,17 @@ Formulario de contacto con campos: nombre, email y mensaje.
 
 Botón de envío con estilo profesional.
 
-# 9 Chatbot Interactivo
-Asistente virtual integrado para ayudar a los usuarios a resolver dudas sobre cursos, colaboraciones y más.   
+# 9 Chatbot con respuestas preprogramadas (rama main)
+Este chatbot utiliza React Simple Chatbot, una librería de React que permite construir flujos conversacionales de forma visual y sencilla. Las respuestas del bot están predefinidas en el código como una serie de pasos, cada uno con un mensaje o una opción que guía al usuario por una ruta concreta.
+No hay inteligencia artificial ni procesamiento del lenguaje natural: simplemente responde según lo que está configurado. Es útil para formularios guiados, preguntas frecuentes o asistentes simples con lógica estática.
+
+🔧 Funcionamiento:
+
+Cada interacción sigue un flujo de pasos declarados en un array.
+
+El bot no interpreta el texto del usuario, sino que responde según la estructura programada.
+
+No requiere conexión a internet para generar respuestas, ya que todo está embebido en el frontend.  
 
 # React + Vite
 
