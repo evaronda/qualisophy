@@ -7,6 +7,13 @@ const About = () => {
 
   return (
     <div>
+      {/* Wave background elements */}
+      <div className="wave-background">
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </div>
+      
       <div className="about-container animated">
         <div className="about-content animated">
           <div className="consultoria animated">
@@ -46,4 +53,3 @@ const About = () => {
 };
 
 export default About;
-
