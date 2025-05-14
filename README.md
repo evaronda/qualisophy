@@ -1,11 +1,14 @@
 # Pasos para ejecutar el proyecto:
 
-1. npm install
+1. Abrir una terminal
 
-2. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
+2. Clonar el repositorio -> git clone https://github.com/evaronda/qualisophy.git
 
+3. npm install
 
-3. npm run dev
+4. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
+
+5. npm run dev
 
 ## Funcionalidades de la Página de Resumen de Cursos
 La página Resumen de Qualisophy actúa como un escaparate central de los cursos disponibles en la plataforma. Sus principales funcionalidades son:
