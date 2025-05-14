@@ -2,6 +2,9 @@
 
 ## 0. Instalar Ollama y un modelo (ollama pull llama3:latest)
 
+1. Entrar en https://ollama.com/download
+2. Descargar Ollama
+
 ## 1. Instalación de dependencias
 
 Ejecuta el siguiente comando para instalar las dependencias necesarias:
