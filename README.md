@@ -5,7 +5,13 @@
 2. Clonar el repositorio -> git clone https://github.com/evaronda/qualisophy.git
 
 3. npm install
+1. Abrir una terminal
 
+2. Clonar el repositorio -> git clone https://github.com/evaronda/qualisophy.git
+
+3. npm install
+
+4. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
 4. Crear un fichero .env con VITE_REACT_APP_WEBHOOK_URL={{tu clave webhook Make}}
 
 
