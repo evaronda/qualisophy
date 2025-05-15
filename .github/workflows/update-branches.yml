@@ -1,0 +1,52 @@
+name: Update branches from main
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Get full history for proper merging
+        
+      - name: Merge main into feature branches
+        run: |
+          # Listado de las branches para actualizar
+          TARGET_BRANCHES="huggingface-ai-chatbot local-ai-chatbot"
+          
+          for branch in $TARGET_BRANCHES; do
+            echo "⏳ Actualizando $branch con cambios de main..."
+            
+            git checkout $branch
+            
+            # Pull
+            git pull origin $branch
+            
+            # Chequeo de seguridad
+            if git merge-base --is-ancestor main $branch; then
+              echo "✅ $branch ya esta actualizada con main"
+              continue
+            fi
+            
+            # Intenta mergear haciendo un merge commit
+            if git merge main --no-edit --no-ff; then
+              echo "🔀 Merge exitoso con $branch"
+              # Push the updates
+              git push origin $branch
+              echo "📤 Pusheado las actualizaciones a $branch"
+            else
+              echo "⚠️ Conflicto en $branch - saltando..."
+              echo "❗ Necesitaras resolver los conflictos manualmente en $branch"
+              git merge --abort
+              # Create a GitHub issue to notify you
+              gh issue create --title "Conflicto con merge en $branch" \
+                --body "Fallo en merge automático. Necesitaras resolver los conflictos manualmente en $branch" \
+                --label "merge-conflict"
+            fi
+          done
+          
+          # Vuelve a main
+          git checkout main
