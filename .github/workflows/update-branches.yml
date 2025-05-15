@@ -1,0 +1,76 @@
+name: Actualizar ramas desde main
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  actualizar-ramas:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+    
+    env:
+      GH_TOKEN: ${{ github.token }}  # Necesario para usar 'gh issue create'
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+        
+      - name: Configurar identidad de Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+      
+      - name: Instalar GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+      
+      - name: Fusionar main en ramas secundarias
+        run: |
+          RAMAS_DESTINO="huggingface-ai-chatbot local-ai-chatbot "
+          ARCHIVOS_IGNORADOS="README.md /src/components/Chatbot/"  # Archivos a preservar
+          
+          for rama in $RAMAS_DESTINO; do
+            echo "⏳ Actualizando $rama..."
+            git checkout -B $rama origin/$rama
+            git pull --no-rebase
+            
+            if git merge-base --is-ancestor main $rama; then
+              echo "✅ $rama ya está actualizada"
+              continue
+            fi
+            
+            # Guardar versiones actuales de los archivos a ignorar
+            for archivo in $ARCHIVOS_IGNORADOS; do
+              if [ -f "$archivo" ]; then
+                cp "$archivo" "/tmp/$archivo.$rama"
+              fi
+            done
+            
+            if git merge --no-edit --no-ff main; then
+              echo "🔀 Fusión exitosa"
+            else
+              # Restaurar archivos ignorados a su versión original
+              for archivo in $ARCHIVOS_IGNORADOS; do
+                if [ -f "/tmp/$archivo.$rama" ]; then
+                  mv "/tmp/$archivo.$rama" "$archivo"
+                  git add "$archivo"
+                fi
+              done
+              
+              # Confirmar los cambios si hubo conflicto
+              if [ -f ".git/MERGE_HEAD" ]; then
+                git commit --no-edit
+                echo "🔄 Archivos específicos preservados en $rama"
+              fi
+            fi
+            
+            git push origin $rama
+            echo "📤 Cambios enviados a $rama"
+          done
+          
+          git checkout main
