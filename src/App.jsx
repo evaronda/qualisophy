@@ -15,7 +15,9 @@ import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester"
 import Resumen from './components/Curso/Resumen';
 import Curso from './components/Contact/Curso';
 import Colaborar from './components/Contact/Colaborar';
-import ChatbotWidget from './components/Chatbot/Chatbot'; // Importa il tuo chatbot
+
+import ChatbotWidget from './components/Chatbot/Chatbot';
+import WaveBackground from './components/WaveBackground/WaveBackground';
 
 
 const App = () => {
@@ -32,6 +34,7 @@ const App = () => {
       <Navbar scrollToFooter={scrollToFooter} /> {/* Passa la funzione al Navbar */}
       <ScrollToTop/>
       <div>
+        <WaveBackground />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
