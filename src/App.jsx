@@ -13,7 +13,7 @@ import CursoCalidadSoftware from './components/Curso/CursoCalidadSoftware';
 import CursoBDDAutomE2E from './components/Curso/CursoBDDAutomE2E';
 import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester";
 import Resumen from './components/Curso/Resumen';
-import Curso from './components/Contact/Curso';
+import CursoFormulario from './components/Contact/CursoFormulario';
 import Colaborar from './components/Contact/Colaborar';
 
 import ChatbotWidget from './components/Chatbot/Chatbot';
@@ -46,7 +46,7 @@ const App = () => {
           <Route path="/bdd-automatizacion" element={<CursoBDDAutomE2E />} />
           <Route path="/CursoCodingDevopsTester" element={<CursoCodingDevopsTester />} />
           <Route path="/resumen" element={<Resumen />} /> {/* Ruta para el componente Resumen */}
-          <Route path="/curso_formulario" element={<Curso />} />
+          <Route path="/curso_formulario" element={<CursoFormulario />} />
           <Route path="/colaborar" element={<Colaborar />} />
         </Routes>
       </div>
