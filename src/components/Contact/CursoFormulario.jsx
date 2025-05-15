@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Curso.css';
+import './CursoFormulario.css';
 import Swal from 'sweetalert2';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
