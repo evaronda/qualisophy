@@ -11,6 +11,9 @@ jobs:
       contents: write
       issues: write
     
+    env:
+      GH_TOKEN: ${{ github.token }}  # Necesario para usar 'gh issue create'
+    
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,6 +23,11 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
+      
+      - name: Instalar GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
       
       - name: Fusionar main en ramas secundarias
         run: |
@@ -55,6 +63,7 @@ jobs:
                 git merge --abort
               fi
               # Crear un issue en GitHub para notificar
+              echo "📝 Creando issue para el conflicto..."
               gh issue create --title "Conflicto de fusión en $rama" \
                 --body "Fusión automática fallida. Por favor resuelve los conflictos entre main y $rama manualmente." \
                 --label "conflicto-fusion"
