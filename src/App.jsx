@@ -9,16 +9,13 @@ import Footer from './components/Home/Footer/Footer';
 import ScrollToTop from './components/hooks/scrollToTop';
 import Contact from './components/Contact/Contact';
 import FormacionEmpresas from './components/FormacionEmpresas/FormacionEmpresas';
-import CursoCalidadSoftware from './components/Curso/CursoCalidadSoftware';
-import CursoBDDAutomE2E from './components/Curso/CursoBDDAutomE2E';
-import CursoCodingDevopsTester from "./components/Curso/CursoCodingDevopsTester";
 import Resumen from './components/Curso/Resumen';
 import CursoFormulario from './components/Contact/CursoFormulario';
 import Colaborar from './components/Contact/Colaborar';
-
 import ChatbotWidget from './components/Chatbot/Chatbot';
 import WaveBackground from './components/WaveBackground/WaveBackground';
-
+import CursoDetalle from './components/Curso/CursoDetalle';
+import { courses } from './components/Curso/coursesData';
 
 const App = () => {
   const footerRef = useRef(null); // Crea un riferimento per il footer
@@ -38,13 +35,14 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Partnership" element={<Partnership />} /> {/* Aggiungi WorkingProcess */}
+          <Route path="/Partnership" element={<Partnership />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/formacion-empresas" element={<FormacionEmpresas />} />
-          <Route path="/curso" element={<CursoCalidadSoftware />} />
-          <Route path="/bdd-automatizacion" element={<CursoBDDAutomE2E />} />
-          <Route path="/CursoCodingDevopsTester" element={<CursoCodingDevopsTester />} />
+          {/* Unified course detail routes */}
+          {courses.map(course => (
+            <Route key={course.id} path={course.path} element={<CursoDetalle courseId={course.id} />} />
+          ))}
           <Route path="/resumen" element={<Resumen />} /> {/* Ruta para el componente Resumen */}
           <Route path="/curso_formulario" element={<CursoFormulario />} />
           <Route path="/colaborar" element={<Colaborar />} />
