@@ -31,44 +31,46 @@ jobs:
       
       - name: Fusionar main en ramas secundarias
         run: |
-          # Lista de ramas que deseas actualizar
-          RAMAS_DESTINO="huggingface-ai-chatbot otra-rama otra-rama-mas"
+          RAMAS_DESTINO="huggingface-ai-chatbot local-ai-chatbot "
+          ARCHIVOS_IGNORADOS="README.md /src/components/Chatbot/"  # Archivos a preservar
           
           for rama in $RAMAS_DESTINO; do
-            echo "⏳ Actualizando $rama con los cambios de main..."
-            
-            # Cambiar a la rama (crea rama local si no existe)
+            echo "⏳ Actualizando $rama..."
             git checkout -B $rama origin/$rama
-            
-            # Obtener cambios más recientes para evitar conflictos
             git pull --no-rebase
             
-            # Verificar si es necesario fusionar (validación de seguridad)
             if git merge-base --is-ancestor main $rama; then
-              echo "✅ $rama ya está actualizada con main"
+              echo "✅ $rama ya está actualizada"
               continue
             fi
             
-            # Intentar fusión (crea un commit de fusión)
-            if git merge --no-edit --no-ff main; then
-              echo "🔀 Fusión exitosa de main en $rama"
-              # Enviar los cambios
-              git push origin $rama
-              echo "📤 Cambios enviados a $rama"
-            else
-              echo "⚠️ Conflicto de fusión en $rama - omitiendo"
-              echo "❗ Necesitarás resolver los conflictos manualmente en $rama"
-              # Solo abortar fusión si hay una en progreso
-              if [ -f ".git/MERGE_HEAD" ]; then
-                git merge --abort
+            # Guardar versiones actuales de los archivos a ignorar
+            for archivo in $ARCHIVOS_IGNORADOS; do
+              if [ -f "$archivo" ]; then
+                cp "$archivo" "/tmp/$archivo.$rama"
               fi
-              # Crear un issue en GitHub para notificar
-              echo "📝 Creando issue para el conflicto..."
-              gh issue create --title "Conflicto de fusión en $rama" \
-                --body "Fusión automática fallida. Por favor resuelve los conflictos entre main y $rama manualmente." \
-                --label "conflicto-fusion"
+            done
+            
+            if git merge --no-edit --no-ff main; then
+              echo "🔀 Fusión exitosa"
+            else
+              # Restaurar archivos ignorados a su versión original
+              for archivo in $ARCHIVOS_IGNORADOS; do
+                if [ -f "/tmp/$archivo.$rama" ]; then
+                  mv "/tmp/$archivo.$rama" "$archivo"
+                  git add "$archivo"
+                fi
+              done
+              
+              # Confirmar los cambios si hubo conflicto
+              if [ -f ".git/MERGE_HEAD" ]; then
+                git commit --no-edit
+                echo "🔄 Archivos específicos preservados en $rama"
+              fi
             fi
+            
+            git push origin $rama
+            echo "📤 Cambios enviados a $rama"
           done
           
-          # Volver a la rama main al finalizar
           git checkout main
