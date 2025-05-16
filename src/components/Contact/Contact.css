@@ -6,34 +6,35 @@ html, body {
     font-family: 'GothamRounded', sans-serif;
 }
 
-.field::placeholder, form button{
+.field::placeholder, form button {
     font-family: 'GothamRounded';
 }
-/* Contact section styles */
-.contact {
+
+/* Contact and Course section styles */
+.contact, .curso {
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content vertically */
+    align-items: center;
     padding: 20px;
     box-sizing: border-box;
     background-image: url(/public/fondo.jpg);
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Ensure it fills the viewport height */
-    background-attachment: fixed; /* Parallax effect */
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
 /* Form container styles */
 form {
-    margin: 0 auto; /* Center form horizontally */
-    max-width: 500px; /* Keep form width consistent */
+    margin: 0 auto;
+    max-width: 500px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 16px;
-    border: 2px solid #5d95ca; /* Border color */
+    border: 2px solid #5d95ca;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px); /* Blur effect */
+    backdrop-filter: blur(10px);
     color: #000000;
     animation: fadeIn 0.5s ease-in-out;
     transition: transform 0.2s ease;
@@ -64,7 +65,7 @@ form h2 {
     text-transform: uppercase;
 }
 
-.input-box .field {
+.input-box .field, .input-box select.field {
     width: 100%;
     height: 50px;
     background: transparent;
@@ -75,9 +76,10 @@ form h2 {
     font-size: 16px;
     color: #000000;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'GothamRounded';
 }
 
-.input-box .field:focus {
+.input-box .field:focus, .input-box select.field:focus {
     border-color: #5d95ca;
     box-shadow: 0 0 10px #5d95ca;
 }
@@ -87,8 +89,32 @@ form h2 {
     resize: none;
 }
 
-.input-box .field::placeholder {
+.input-box .field::placeholder, .input-box select.field::placeholder {
     color: #bbb;
+}
+
+.input-box select.field {
+    appearance: none;
+    background: linear-gradient(135deg, #5d95ca 0%, #ffffff 100%);
+    border: 2px solid #5d95ca;
+    border-radius: 10px;
+    padding: 12px;
+    padding-right: 40px;
+    font-size: 16px;
+    color: #5d95ca;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%235d95ca' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.input-box select.field option {
+    background: linear-gradient(135deg, #5d95ca 0%, #ffffff 100%);
+    color: #000;
+    font-family: 'GothamRounded';
+    padding: 10px;
 }
 
 /* Button styles */
@@ -113,13 +139,23 @@ form button:hover {
 }
 
 form button:focus {
-    outline: 2px solid #5d95ca; /* Mejora de accesibilidad */
+    outline: 2px solid #5d95ca;
     outline-offset: 2px;
 }
 
 form button:disabled {
     background: #ddd;
     cursor: not-allowed;
+}
+
+form button.selected,
+form button.active,
+form button:active {
+    background: #1c56a5;
+    transform: scale(0.98);
+    box-shadow: 0 0 10px rgba(93, 149, 202, 0.5);
+    border: 2px solid #5d95ca;
+    outline: none;
 }
 
 /* Animation styles */
